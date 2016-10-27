@@ -25,7 +25,7 @@
 
 @property (strong, nonatomic) NSMutableArray *receivedSongs;
 
-@property (strong, nonatomic) NSString *chosenMood;
+@property (strong, nonatomic) NSMutableArray *chosenMoods;
 
 
 
