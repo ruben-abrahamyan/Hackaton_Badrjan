@@ -53,73 +53,73 @@
 
 
 - (NSString *)getUsername {
-    return self.username;
+    return _username;
 }
 
 - (void)setUsername:(NSString *)username {
-    self.username = username;
+    _username = username;
 }
 
 
 - (NSMutableArray *)getPreferredStyles {
-    return self.preferredStyles;
+    return _preferredStyles;
 }
 
 - (void)setPreferredStyles:(NSMutableArray *)preferredStyles {
-    self.preferredStyles = preferredStyles;
+    _preferredStyles = preferredStyles;
 }
 
 
 - (UIImage *)getThumbnail {
-    return self.thumbnail;
+    return _thumbnail;
 }
 
 - (void)setThumbnail:(UIImage *)thumbnail {
-    self.thumbnail = thumbnail;
+    _thumbnail = thumbnail;
 }
 
 
 - (UIImage *)getTargetPhoto {
-    return self.targetPhoto;
+    return _targetPhoto;
 }
 
 - (void)setTargetPhoto:(UIImage *)targetPhoto {
-    self.targetPhoto = targetPhoto;
+    _targetPhoto = targetPhoto;
 }
 
 
 - (MoodPercentages *)getMoodPercentages {
-    return self.moodPercentages;
+    return _moodPercentages;
 }
 
 - (void)setMoodPercentages:(MoodPercentages *)moodPercentages {
-    self.moodPercentages = moodPercentages;
+    _moodPercentages = moodPercentages;
 }
 
 
 - (NSMutableArray *)getCurrentPlaylist {
-    return self.currentPlaylist;
+    return _currentPlaylist;
 }
 
 - (void)setCurrentPlaylist:(NSMutableArray *)currentPlaylist {
-    self.currentPlaylist = currentPlaylist;
+    _currentPlaylist = currentPlaylist;
 }
 
 - (NSMutableArray *)getReceivedSongs {
-    return self.receivedSongs;
+    return _receivedSongs;
 }
 
 
 - (void)setReceivedSongs:(NSMutableArray *)receivedSongs {
-    self.receivedSongs = receivedSongs;
+    _receivedSongs = receivedSongs;
 }
 
 - (NSMutableArray *)getChosenMoods {
-    return self.chosenMoods;
+    return _chosenMoods;
 }
 
 - (void)setChosenMods:(NSMutableArray *)chosenMoods {
-    self.chosenMoods = chosenMoods;
+    _chosenMoods = chosenMoods;
 }
 
 #define kHappinessFactorX 1
