@@ -13,6 +13,8 @@
 		A9B00D741DC1DA5F00AF11D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B00D721DC1DA5F00AF11D7 /* Main.storyboard */; };
 		A9B00D761DC1DA5F00AF11D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */; };
 		A9B00D791DC1DA5F00AF11D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */; };
+		A9B00D821DC2051700AF11D7 /* BDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D811DC2051700AF11D7 /* BDMainViewController.m */; };
+		A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D841DC2075500AF11D7 /* BDCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9B00D781DC1DA5F00AF11D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9B00D7A1DC1DA5F00AF11D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9B00D801DC2051700AF11D7 /* BDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMainViewController.h; sourceTree = "<group>"; };
+		A9B00D811DC2051700AF11D7 /* BDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDMainViewController.m; sourceTree = "<group>"; };
+		A9B00D831DC2075500AF11D7 /* BDCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCollectionViewController.h; sourceTree = "<group>"; };
+		A9B00D841DC2075500AF11D7 /* BDCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 				A9B00D6F1DC1DA5F00AF11D7 /* ViewController.h */,
 				A9B00D701DC1DA5F00AF11D7 /* ViewController.m */,
 				A9B00D721DC1DA5F00AF11D7 /* Main.storyboard */,
+				A9B00D831DC2075500AF11D7 /* BDCollectionViewController.h */,
+				A9B00D841DC2075500AF11D7 /* BDCollectionViewController.m */,
+				A9B00D801DC2051700AF11D7 /* BDMainViewController.h */,
+				A9B00D811DC2051700AF11D7 /* BDMainViewController.m */,
 				A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */,
 				A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */,
 				A9B00D7A1DC1DA5F00AF11D7 /* Info.plist */,
@@ -110,7 +120,7 @@
 				TargetAttributes = {
 					A9B00D651DC1DA5F00AF11D7 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 7TE55D8F3X;
+						DevelopmentTeam = LLSV39R9YJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -154,6 +164,8 @@
 				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
 				A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */,
 				A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */,
+				A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */,
+				A9B00D821DC2051700AF11D7 /* BDMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7TE55D8F3X;
+				DEVELOPMENT_TEAM = LLSV39R9YJ;
 				INFOPLIST_FILE = Badrjan_Hackaton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PicsArt.Badrjan-Hackaton";
@@ -285,7 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7TE55D8F3X;
+				DEVELOPMENT_TEAM = LLSV39R9YJ;
 				INFOPLIST_FILE = Badrjan_Hackaton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PicsArt.Badrjan-Hackaton";
