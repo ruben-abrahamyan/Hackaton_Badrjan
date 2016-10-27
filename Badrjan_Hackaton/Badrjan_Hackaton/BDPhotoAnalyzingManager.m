@@ -26,10 +26,10 @@
     [request setHTTPBody:image];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSData *jsonData = [requestReply dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
-        completion(YES, json);
+        NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+        completion(YES, [jsonArray[0] objectForKey:@"scores"]);
     }] resume];
 }
 

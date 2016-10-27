@@ -11,13 +11,15 @@
 
 @interface MoodPercentages : NSObject
 
-@property (nonatomic) CGFloat Happiness;
-@property (nonatomic) CGFloat Anger;
-@property (nonatomic) CGFloat Disgust;
-@property (nonatomic) CGFloat Contempt;
-@property (nonatomic) CGFloat Sadness;
-@property (nonatomic) CGFloat Neutral;
-@property (nonatomic) CGFloat Fear;
-@property (nonatomic) CGFloat Surprise;
+@property (nonatomic) CGFloat happiness;
+@property (nonatomic) CGFloat anger;
+@property (nonatomic) CGFloat disgust;
+@property (nonatomic) CGFloat contempt;
+@property (nonatomic) CGFloat sadness;
+@property (nonatomic) CGFloat neutral;
+@property (nonatomic) CGFloat fear;
+@property (nonatomic) CGFloat surprise;
+
+- (id)initWithDictionary:(NSDictionary *) dict;
 
 @end

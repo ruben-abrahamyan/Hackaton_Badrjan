@@ -46,7 +46,6 @@
 - (id)init {
     if (self = [super init]) {
         self.username = @"Default Nickname";
-        self.moodPercentages = [[MoodPercentages alloc] init];
     }
     return self;
 }
@@ -85,11 +84,6 @@
 
 - (void)setTargetPhoto:(UIImage *)targetPhoto {
     _targetPhoto = targetPhoto;
-}
-
-
-- (MoodPercentages *)getMoodPercentages {
-    return _moodPercentages;
 }
 
 - (void)setMoodPercentages:(MoodPercentages *)moodPercentages {
@@ -144,15 +138,15 @@
 - (CGPoint)getCoordinatesOfMood {
     CGFloat CoordinateX, CoordinateY;
     
-    if (self.moodPercentages.Neutral > 0.5) {
-        CoordinateX = self.moodPercentages.Happiness * kHappinessFactorX + self.moodPercentages.Sadness * kSadnessFactorX + self.moodPercentages.Anger * kAngerFactorX + self.moodPercentages.Disgust * kDisgustFactorX + self.moodPercentages.Fear * kFearFactorX + self.moodPercentages.Surprise * kSurpriseFactorX + self.moodPercentages.Neutral * kNeutralFactorX + self.moodPercentages.Contempt * kContemptFactorX;
+    if (self.moodPercentages.neutral > 0.5) {
+        CoordinateX = self.moodPercentages.happiness * kHappinessFactorX + self.moodPercentages.sadness * kSadnessFactorX + self.moodPercentages.anger * kAngerFactorX + self.moodPercentages.disgust * kDisgustFactorX + self.moodPercentages.fear * kFearFactorX + self.moodPercentages.surprise * kSurpriseFactorX + self.moodPercentages.neutral * kNeutralFactorX + self.moodPercentages.contempt * kContemptFactorX;
         
         CoordinateX *= 2;
         
         CoordinateX = MIN(MAX(CoordinateX, -1), 1);
         CoordinateX = ((CoordinateX + 1) / 2.0) * 999999;
         
-        CoordinateY = self.moodPercentages.Happiness * kHappinessFactorY + self.moodPercentages.Sadness * kSadnessFactorY + self.moodPercentages.Anger * kAngerFactorY + self.moodPercentages.Disgust * kDisgustFactorY + self.moodPercentages.Fear * kFearFactorY + self.moodPercentages.Surprise * kSurpriseFactorY + self.moodPercentages.Neutral * kNeutralFactorY + self.moodPercentages.Contempt * kContemptFactorY;
+        CoordinateY = self.moodPercentages.happiness * kHappinessFactorY + self.moodPercentages.sadness * kSadnessFactorY + self.moodPercentages.anger * kAngerFactorY + self.moodPercentages.disgust * kDisgustFactorY + self.moodPercentages.fear * kFearFactorY + self.moodPercentages.surprise * kSurpriseFactorY + self.moodPercentages.neutral * kNeutralFactorY + self.moodPercentages.contempt * kContemptFactorY;
         
         CoordinateY *=2;
         
@@ -160,12 +154,12 @@
         CoordinateY = ((CoordinateY + 1) / 2.0) * 999999;
         
     } else {
-        CoordinateX = self.moodPercentages.Happiness * kHappinessFactorX + self.moodPercentages.Sadness * kSadnessFactorX + self.moodPercentages.Anger * kAngerFactorX + self.moodPercentages.Disgust * kDisgustFactorX + self.moodPercentages.Fear * kFearFactorX + self.moodPercentages.Surprise * kSurpriseFactorX + self.moodPercentages.Neutral * kNeutralFactorX + self.moodPercentages.Contempt * kContemptFactorX;
+        CoordinateX = self.moodPercentages.happiness * kHappinessFactorX + self.moodPercentages.sadness * kSadnessFactorX + self.moodPercentages.anger * kAngerFactorX + self.moodPercentages.disgust * kDisgustFactorX + self.moodPercentages.fear * kFearFactorX + self.moodPercentages.surprise * kSurpriseFactorX + self.moodPercentages.neutral * kNeutralFactorX + self.moodPercentages.contempt * kContemptFactorX;
         
         CoordinateX = MIN(MAX(CoordinateX, -1), 1);
         CoordinateX = ((CoordinateX + 1) / 2.0) * 999999;
         
-        CoordinateY = self.moodPercentages.Happiness * kHappinessFactorY + self.moodPercentages.Sadness * kSadnessFactorY + self.moodPercentages.Anger * kAngerFactorY + self.moodPercentages.Disgust * kDisgustFactorY + self.moodPercentages.Fear * kFearFactorY + self.moodPercentages.Surprise * kSurpriseFactorY + self.moodPercentages.Neutral * kNeutralFactorY + self.moodPercentages.Contempt * kContemptFactorY;
+        CoordinateY = self.moodPercentages.happiness * kHappinessFactorY + self.moodPercentages.sadness * kSadnessFactorY + self.moodPercentages.anger * kAngerFactorY + self.moodPercentages.disgust * kDisgustFactorY + self.moodPercentages.fear * kFearFactorY + self.moodPercentages.surprise * kSurpriseFactorY + self.moodPercentages.neutral * kNeutralFactorY + self.moodPercentages.contempt * kContemptFactorY;
         
         CoordinateY = MIN(MAX(CoordinateY, -1), 1);
         CoordinateY = ((CoordinateY + 1) / 2.0) * 999999;

@@ -6,9 +6,10 @@
 //  Copyright © 2016 Badrjan. All rights reserved.
 //
 #import "BDMainViewController.h"
+#import "BDPhotoAnalyzingManager.h"
+#import "BDUser.h"
 
-
-@interface BDMainViewController ()
+@interface BDMainViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (nonatomic) BOOL buttonEnabled;
@@ -21,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
 
 - (void)changeButtonState: (NSInteger *)count {
@@ -44,8 +45,36 @@
     }
     
 }
+- (IBAction)goToNextController:(id)sender {
+    [self openCamera];
+}
+
+- (void)openCamera {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self.navigationController presentViewController:picker animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    NSData *imageData = UIImageJPEGRepresentation(chosenImage, 1.0);
+    BDPhotoAnalyzingManager *analyzer = [[BDPhotoAnalyzingManager alloc] init];
+    [analyzer analyzeImage:imageData withCompletion:^(BOOL success, NSDictionary *result) {
+        MoodPercentages *percentages = [[MoodPercentages alloc] initWithDictionary:result];
+        [[BDUser sharedUser] setMoodPercentages:percentages];
+    }];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self performSegueWithIdentifier:@"goToYourMoodViewControllerSegueIdentifier" sender:self];
+    }];
+}
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"goToYourMoodViewControllerSegueIdentifier"]) {
+        return;
+    }
     BDCollectionViewController *vc = segue.destinationViewController;
     vc.delegate = self;
 }
