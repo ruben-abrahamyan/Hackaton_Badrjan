@@ -11,23 +11,22 @@
 
 @interface BDUser : NSObject
 
-@property (strong, nonatomic) NSString *username;
+- (NSString *)getUserName;
 
-@property (strong, nonatomic) NSMutableArray *preferredStyle;
+- (NSMutableArray *)getPreferredStyles;
 
-@property (strong, nonatomic) UIImage *thumbnail;
+- (UIImage *)getThumbnail;
 
-@property (strong, nonatomic) UIImage *targetPhoto;
+- (UIImage *)getTargetPhoto;
 
-@property (strong, nonatomic) NSMutableArray *topMoods;
+- (NSMutableArray *)getTopMoods;
 
-@property (strong, nonatomic) NSMutableArray *currentPlaylist;
+- (NSMutableArray *)getCurrentPlaylist;
 
-@property (strong, nonatomic) NSMutableArray *receivedSongs;
+- (NSMutableArray *)getReceivedSongs;
 
-@property (strong, nonatomic) NSMutableArray *chosenMoods;
+- (NSMutableArray *)getChosenMoods;
 
-
-
+- (CGPoint)getCoordinatesOfMood;
 
 @end
