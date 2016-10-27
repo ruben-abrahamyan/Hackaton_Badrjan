@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0B6AE51DC1F59100FC0DA2 /* BDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */; };
 		A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6A1DC1DA5F00AF11D7 /* main.m */; };
 		A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */; };
 		A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D701DC1DA5F00AF11D7 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0B6AE31DC1F59100FC0DA2 /* BDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDUser.h; sourceTree = "<group>"; };
+		2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDUser.m; sourceTree = "<group>"; };
 		A9B00D661DC1DA5F00AF11D7 /* Badrjan_Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badrjan_Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B00D6A1DC1DA5F00AF11D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0B6AE21DC1F41500FC0DA2 /* Shared Instance */ = {
+			isa = PBXGroup;
+			children = (
+				2C0B6AE31DC1F59100FC0DA2 /* BDUser.h */,
+				2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */,
+			);
+			name = "Shared Instance";
+			sourceTree = "<group>";
+		};
 		A9B00D5D1DC1DA5E00AF11D7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 		A9B00D681DC1DA5F00AF11D7 /* Badrjan_Hackaton */ = {
 			isa = PBXGroup;
 			children = (
+				2C0B6AE21DC1F41500FC0DA2 /* Shared Instance */,
 				A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */,
 				A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */,
 				A9B00D6F1DC1DA5F00AF11D7 /* ViewController.h */,
@@ -151,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0B6AE51DC1F59100FC0DA2 /* BDUser.m in Sources */,
 				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
 				A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */,
 				A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */,
@@ -312,6 +326,7 @@
 				A9B00D7F1DC1DA5F00AF11D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
