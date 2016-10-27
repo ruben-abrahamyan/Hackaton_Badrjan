@@ -15,26 +15,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOR-25-dv9">
+                        <color key="backgroundColor" red="0.5607843137254902" green="0.85098039215686272" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Eyd-NL-Mg1"/>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEk-As-i3s">
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Eyd-NL-Mg1" secondAttribute="trailing" id="W4l-Hs-g4u"/>
-                <constraint firstItem="Eyd-NL-Mg1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="X4k-Ly-olO"/>
-                <constraint firstItem="HEk-As-i3s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fD1-CQ-ljH"/>
-                <constraint firstAttribute="bottom" secondItem="HEk-As-i3s" secondAttribute="bottom" id="fdE-Ge-o5g"/>
-                <constraint firstAttribute="bottom" secondItem="Eyd-NL-Mg1" secondAttribute="bottom" id="mgA-k4-UMY"/>
-                <constraint firstItem="HEk-As-i3s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oLM-Wl-OLL"/>
-                <constraint firstAttribute="trailing" secondItem="HEk-As-i3s" secondAttribute="trailing" id="sqj-yR-l1F"/>
-                <constraint firstItem="Eyd-NL-Mg1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="szU-cC-EY1"/>
+                <constraint firstItem="Eyd-NL-Mg1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3BV-vl-8v2"/>
+                <constraint firstAttribute="trailing" secondItem="Eyd-NL-Mg1" secondAttribute="trailing" id="7dI-Zh-QQh"/>
+                <constraint firstAttribute="trailing" secondItem="EOR-25-dv9" secondAttribute="trailing" id="8MW-VK-Jqs"/>
+                <constraint firstItem="EOR-25-dv9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8UQ-Cj-Ww3"/>
+                <constraint firstAttribute="bottom" secondItem="HEk-As-i3s" secondAttribute="bottom" id="S0q-uv-3qh"/>
+                <constraint firstAttribute="trailing" secondItem="HEk-As-i3s" secondAttribute="trailing" id="XrL-4B-2hO"/>
+                <constraint firstAttribute="bottom" secondItem="EOR-25-dv9" secondAttribute="bottom" id="a7Q-A3-uOC"/>
+                <constraint firstItem="HEk-As-i3s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cIk-hz-Jsi"/>
+                <constraint firstItem="EOR-25-dv9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dF6-qJ-tGJ"/>
+                <constraint firstItem="HEk-As-i3s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gn8-vX-gDp"/>
+                <constraint firstItem="Eyd-NL-Mg1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mPM-eg-hA5"/>
+                <constraint firstAttribute="bottom" secondItem="Eyd-NL-Mg1" secondAttribute="bottom" id="ovP-gS-TpQ"/>
             </constraints>
             <connections>
                 <outlet property="backgroundImage" destination="Eyd-NL-Mg1" id="ahM-4u-QY2"/>
+                <outlet property="containerView" destination="EOR-25-dv9" id="wMi-yp-pny"/>
                 <outlet property="title" destination="HEk-As-i3s" id="y4y-hj-y5L"/>
             </connections>
             <point key="canvasLocation" x="-576" y="73"/>

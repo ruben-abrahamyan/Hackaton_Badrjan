@@ -11,5 +11,8 @@
 @interface BDCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UILabel *title;
-
+@property (nonatomic) CGFloat cellSize;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (nonatomic) BOOL cellIsSelected;
+-(void) changeCellSize;
 @end

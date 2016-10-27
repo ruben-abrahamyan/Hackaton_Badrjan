@@ -45,7 +45,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08a-ls-s9s">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08a-ls-s9s">
                                 <color key="backgroundColor" red="0.42113089089804234" green="1" blue="0.7635484154960861" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="aYO-if-75g"/>
@@ -72,6 +72,10 @@
                             <constraint firstItem="08a-ls-s9s" firstAttribute="top" secondItem="ner-ML-25a" secondAttribute="bottom" id="xoz-X0-hS9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="08a-ls-s9s" id="1CE-1d-oGT"/>
+                        <outlet property="titleLabel" destination="Vrn-Nt-sII" id="xX0-Br-qMr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iva-gz-tUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
