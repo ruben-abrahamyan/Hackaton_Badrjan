@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		2C0B6AE51DC1F59100FC0DA2 /* BDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */; };
 		2C0B6AE81DC2634800FC0DA2 /* MoodPercentages.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B6AE71DC2634800FC0DA2 /* MoodPercentages.m */; };
+		953A62BE1DC27E9A009D7CD4 /* BDCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62B91DC27E9A009D7CD4 /* BDCameraViewController.m */; };
+		953A62BF1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */; };
+		953A62C01DC27E9A009D7CD4 /* BDYourMoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */; };
+		A949F89C1DC288B30073FBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A949F89A1DC288B30073FBBC /* Main.storyboard */; };
 		A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6A1DC1DA5F00AF11D7 /* main.m */; };
 		A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */; };
 		A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D701DC1DA5F00AF11D7 /* ViewController.m */; };
-		A9B00D741DC1DA5F00AF11D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B00D721DC1DA5F00AF11D7 /* Main.storyboard */; };
 		A9B00D761DC1DA5F00AF11D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */; };
 		A9B00D791DC1DA5F00AF11D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */; };
 		A9B00D821DC2051700AF11D7 /* BDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D811DC2051700AF11D7 /* BDMainViewController.m */; };
@@ -26,13 +29,19 @@
 		2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDUser.m; sourceTree = "<group>"; };
 		2C0B6AE61DC2634800FC0DA2 /* MoodPercentages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodPercentages.h; sourceTree = "<group>"; };
 		2C0B6AE71DC2634800FC0DA2 /* MoodPercentages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodPercentages.m; sourceTree = "<group>"; };
+		953A62B81DC27E9A009D7CD4 /* BDCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCameraViewController.h; sourceTree = "<group>"; };
+		953A62B91DC27E9A009D7CD4 /* BDCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCameraViewController.m; sourceTree = "<group>"; };
+		953A62BA1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPhotoAnalyzingManager.h; sourceTree = "<group>"; };
+		953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPhotoAnalyzingManager.m; sourceTree = "<group>"; };
+		953A62BC1DC27E9A009D7CD4 /* BDYourMoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDYourMoodViewController.h; sourceTree = "<group>"; };
+		953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDYourMoodViewController.m; sourceTree = "<group>"; };
+		A949F89B1DC288B30073FBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9B00D661DC1DA5F00AF11D7 /* Badrjan_Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badrjan_Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B00D6A1DC1DA5F00AF11D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A9B00D6F1DC1DA5F00AF11D7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A9B00D701DC1DA5F00AF11D7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A9B00D731DC1DA5F00AF11D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9B00D781DC1DA5F00AF11D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9B00D7A1DC1DA5F00AF11D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +100,6 @@
 				A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */,
 				A9B00D6F1DC1DA5F00AF11D7 /* ViewController.h */,
 				A9B00D701DC1DA5F00AF11D7 /* ViewController.m */,
-				A9B00D721DC1DA5F00AF11D7 /* Main.storyboard */,
 				A9B00D861DC21F3C00AF11D7 /* BDCollectionViewCell.h */,
 				A9B00D871DC21F3C00AF11D7 /* BDCollectionViewCell.m */,
 				A9B00D881DC21F3C00AF11D7 /* BDCollectionViewCell.xib */,
@@ -99,8 +107,15 @@
 				A9B00D841DC2075500AF11D7 /* BDCollectionViewController.m */,
 				A9B00D801DC2051700AF11D7 /* BDMainViewController.h */,
 				A9B00D811DC2051700AF11D7 /* BDMainViewController.m */,
+				953A62B81DC27E9A009D7CD4 /* BDCameraViewController.h */,
+				953A62B91DC27E9A009D7CD4 /* BDCameraViewController.m */,
+				953A62BA1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.h */,
+				953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */,
+				953A62BC1DC27E9A009D7CD4 /* BDYourMoodViewController.h */,
+				953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */,
 				A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */,
 				A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */,
+				A949F89A1DC288B30073FBBC /* Main.storyboard */,
 				A9B00D7A1DC1DA5F00AF11D7 /* Info.plist */,
 				A9B00D691DC1DA5F00AF11D7 /* Supporting Files */,
 			);
@@ -177,7 +192,7 @@
 				A9B00D791DC1DA5F00AF11D7 /* LaunchScreen.storyboard in Resources */,
 				A9B00D761DC1DA5F00AF11D7 /* Assets.xcassets in Resources */,
 				A9B00D8A1DC21F3C00AF11D7 /* BDCollectionViewCell.xib in Resources */,
-				A9B00D741DC1DA5F00AF11D7 /* Main.storyboard in Resources */,
+				A949F89C1DC288B30073FBBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,9 +207,12 @@
 				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
 				A9B00D891DC21F3C00AF11D7 /* BDCollectionViewCell.m in Sources */,
 				A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */,
+				953A62BF1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m in Sources */,
 				2C0B6AE81DC2634800FC0DA2 /* MoodPercentages.m in Sources */,
+				953A62BE1DC27E9A009D7CD4 /* BDCameraViewController.m in Sources */,
 				A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */,
 				A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */,
+				953A62C01DC27E9A009D7CD4 /* BDYourMoodViewController.m in Sources */,
 				A9B00D821DC2051700AF11D7 /* BDMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,10 +220,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A9B00D721DC1DA5F00AF11D7 /* Main.storyboard */ = {
+		A949F89A1DC288B30073FBBC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A9B00D731DC1DA5F00AF11D7 /* Base */,
+				A949F89B1DC288B30073FBBC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

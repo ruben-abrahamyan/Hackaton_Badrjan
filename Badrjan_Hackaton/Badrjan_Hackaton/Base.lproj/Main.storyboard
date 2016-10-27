@@ -50,7 +50,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="aYO-if-75g"/>
                                 </constraints>
-                                <state key="normal" title="NEXT"/>
+                                <state key="normal" title="Pick at least 3"/>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ner-ML-25a">
                                 <connections>
