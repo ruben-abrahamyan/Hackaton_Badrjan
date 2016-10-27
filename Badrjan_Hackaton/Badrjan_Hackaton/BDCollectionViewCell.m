@@ -23,13 +23,16 @@
 -(void) changeCellSize {
     if(self.cellIsSelected) {
         CGFloat width = self.frame.size.width - 8;
+        CGFloat cellHeight = 138.f/159.f * self.frame.size.width - 8;
         CGFloat imageWidth = width - 2;
-        self.containerView.frame = CGRectMake(4, 4, width, width);
-        self.backgroundImage.frame = CGRectMake(5, 5, imageWidth, imageWidth);
+        CGFloat imageHeight= cellHeight - 2;
+        self.containerView.frame = CGRectMake(4, 4, width, cellHeight);
+        self.backgroundImage.frame = CGRectMake(5, 5, imageWidth, imageHeight);
     } else {
         CGFloat width = (self.superview.frame.size.width - 2)/2.f;
-        self.containerView.frame = CGRectMake(0, 0, width, width);
-        self.backgroundImage.frame = CGRectMake(0, 0, width, width);
+        CGFloat cellHeight = 138.f/159.f * width;
+        self.containerView.frame = CGRectMake(0, 0, width, cellHeight);
+        self.backgroundImage.frame = CGRectMake(0, 0, width, cellHeight);
         
     }
     [self.backgroundImage updateConstraints];

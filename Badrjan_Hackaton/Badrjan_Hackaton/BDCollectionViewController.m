@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSArray *styleArray;
 @property (nonatomic, strong) NSMutableArray *indexSelectedArray;
 @property (nonatomic) CGFloat cellWidth;
+@property (nonatomic) CGFloat cellHeight;
 @end
 
 @implementation BDCollectionViewController
@@ -28,6 +29,7 @@
         [self.indexSelectedArray addObject:[NSNumber numberWithBool:NO]];
     }
     self.cellWidth = (self.collectionView.frame.size.width - 2)/2.f;
+    self.cellHeight = 138.f/159.f * self.cellWidth;
     [self.collectionView registerNib:[UINib nibWithNibName:@"BDCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"Cell"];
 }
 
@@ -57,7 +59,7 @@
 #pragma mark <UICollectionViewDelegate>
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.cellWidth, self.cellWidth);
+    return CGSizeMake(self.cellWidth, self.cellHeight);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Badrjan_Hackaton/BDCollectionViewCell.m"
-            timestampString = "499276525.111436"
+            timestampString = "499277702.93752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-changeCellSize"
             landmarkType = "7">
          </BreakpointContent>
