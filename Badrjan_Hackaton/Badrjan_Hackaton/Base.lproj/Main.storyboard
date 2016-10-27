@@ -52,9 +52,7 @@
                                 </constraints>
                                 <state key="normal" title="NEXT"/>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ner-ML-25a">
-                                <frame key="frameInset" height="501" maxY="64"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ner-ML-25a">
                                 <connections>
                                     <segue destination="qMO-bO-hTG" kind="embed" id="KV4-e7-SdT"/>
                                 </connections>
@@ -66,8 +64,12 @@
                             <constraint firstAttribute="trailing" secondItem="Vrn-Nt-sII" secondAttribute="trailing" id="L52-XZ-K9A"/>
                             <constraint firstItem="08a-ls-s9s" firstAttribute="leading" secondItem="MUK-cF-RaH" secondAttribute="leading" id="N9v-Bu-P3P"/>
                             <constraint firstItem="rXc-GY-v40" firstAttribute="top" secondItem="08a-ls-s9s" secondAttribute="bottom" id="NUV-dH-Xty"/>
+                            <constraint firstAttribute="trailing" secondItem="ner-ML-25a" secondAttribute="trailing" id="NcA-Mn-x6Z"/>
                             <constraint firstItem="Vrn-Nt-sII" firstAttribute="top" secondItem="aAK-S0-uIB" secondAttribute="bottom" id="VjR-83-atr"/>
+                            <constraint firstItem="ner-ML-25a" firstAttribute="leading" secondItem="MUK-cF-RaH" secondAttribute="leading" id="qhL-GB-PFo"/>
                             <constraint firstItem="Vrn-Nt-sII" firstAttribute="leading" secondItem="MUK-cF-RaH" secondAttribute="leading" id="t3g-C6-vRe"/>
+                            <constraint firstItem="ner-ML-25a" firstAttribute="top" secondItem="Vrn-Nt-sII" secondAttribute="bottom" id="wAo-T4-I1G"/>
+                            <constraint firstItem="08a-ls-s9s" firstAttribute="top" secondItem="ner-ML-25a" secondAttribute="bottom" id="xoz-X0-hS9"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -79,24 +81,25 @@
         <scene sceneID="fsq-m2-hKm">
             <objects>
                 <collectionViewController id="qMO-bO-hTG" customClass="BDCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xkc-lZ-96b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="501"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xkc-lZ-96b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wIe-zh-SNZ">
+                        <color key="backgroundColor" red="1" green="0.36992399014601896" blue="0.40913883917447558" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="wIe-zh-SNZ">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ttW-dR-g7J">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ttW-dR-g7J" customClass="BDCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
+                                <color key="backgroundColor" red="0.41895118776340357" green="1" blue="0.56883641430608667" alpha="1" colorSpace="calibratedRGB"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -107,7 +110,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUk-Ye-Xfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="44"/>
+            <point key="canvasLocation" x="1543" y="4"/>
         </scene>
     </scenes>
 </document>
