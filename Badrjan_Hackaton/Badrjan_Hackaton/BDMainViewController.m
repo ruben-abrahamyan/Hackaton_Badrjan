@@ -21,12 +21,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.buttonEnabled = NO;
 
 }
 
 - (void)changeButtonState: (NSInteger *)count {
-    NSLog(@"%ld", count);
+    int i = count;
+    if(self.buttonEnabled) {
+        if(i == 2) {
+            self.buttonEnabled = NO;
+            self.nextButton.enabled = NO;
+            [self.nextButton setTitle:@"Pick at least 3" forState:UIControlStateNormal];
+            return;
+        }
+        
+    } else {
+        if(i == 3) {
+            self.buttonEnabled = YES;
+            self.nextButton.enabled = YES;
+            [self.nextButton setTitle:@"Show us how you feel" forState:UIControlStateNormal];
+            return;
+        }
+    }
     
 }
 
