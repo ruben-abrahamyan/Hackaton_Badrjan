@@ -8,9 +8,11 @@
 
 #import "BDCollectionViewController.h"
 #import "BDCollectionViewCell.h"
+#import "BDUser.h"
 
 @interface BDCollectionViewController ()
-@property (nonatomic, copy) NSArray *styleArray;
+@property (nonatomic, strong) NSArray *styleArray;
+@property (nonatomic, strong) NSMutableArray *indexSelectedArray;
 @property (nonatomic) CGFloat cellWidth;
 @end
 
@@ -20,7 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.styleArray = [NSArray arrayWithObjects: @"POP", @"ROCK", @"BLUES", @"METAL", @"HIP-HOP", @"INDIE", @"JAZZ", @"CLASSICAL", @"REGGAE", @"ELECTRO", nil];
+    self.styleArray = [NSArray arrayWithObjects: @"POP", @"ROCK", @"BLUES", @"METAL", @"HIP-HOP", @"WORLD", @"JAZZ", @"CLASSICAL", @"REGGAE", @"ELECTRO", nil];
+    self.indexSelectedArray = [[NSMutableArray alloc] initWithCapacity:self.styleArray.count];
+    for(int i = 0; i < self.styleArray.count; i++) {
+        [self.indexSelectedArray addObject:[NSNumber numberWithBool:NO]];
+    }
     self.cellWidth = (self.collectionView.frame.size.width - 2)/2.f;
     [self.collectionView registerNib:[UINib nibWithNibName:@"BDCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"Cell"];
 }
@@ -38,8 +44,11 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    
+        /*BOOL selected = [self.indexSelectedArray[indexPath.item] boolValue];
+        cell.isSelected = selected;
+        [cell changeCellSize];*/
     // Configure the cell
+    
     cell.backgroundColor = [UIColor magentaColor];
     cell.title.text = self.styleArray[indexPath.item];
     return cell;
@@ -50,42 +59,25 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(self.cellWidth, self.cellWidth);
 }
-/*
-- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, 0, 2, 0); // top, left, bottom, right
-}
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    
-    return 2;
-}*/
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    BDCollectionViewCell *cell = (BDCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    BOOL selected = [self.indexSelectedArray[indexPath.item] boolValue];
+    selected = !selected;
+    cell.cellIsSelected = selected;
+    [cell changeCellSize];
+    [self.indexSelectedArray replaceObjectAtIndex:indexPath.item withObject:[NSNumber numberWithBool:selected]];
+    //[self.collectionView reloadData];
+    if(selected) {
+        /*[[BDUser sharedUser].preferredStyle addObject:[NSString stringWithFormat:@"%@", cell.title.text]];
+        NSLog(@"%@", cell.title.text);
+        NSLog(@"%@", [BDUser sharedUser].preferredStyle);*/
+        
+    } else {
+        /*[[BDUser sharedUser].preferredStyle removeObject:[NSString stringWithFormat:@"%@", cell.title.text]];
+        NSLog(@"%@", [BDUser sharedUser].preferredStyle);*/
+        
+    }
 }
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
