@@ -38,4 +38,6 @@
 
 - (CGPoint)getCoordinatesOfMood;
 
++ (instancetype)sharedUser;
+
 @end
