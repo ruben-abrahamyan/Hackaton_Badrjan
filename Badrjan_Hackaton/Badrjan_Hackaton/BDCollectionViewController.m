@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSMutableArray *indexSelectedArray;
 @property (nonatomic) CGFloat cellWidth;
 @property (nonatomic) CGFloat cellHeight;
+@property (nonatomic, strong) NSMutableArray *titleArray;
 @end
 
 @implementation BDCollectionViewController
@@ -23,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.titleArray = [[NSMutableArray alloc] init];
     self.styleArray = [NSArray arrayWithObjects: @"POP", @"ROCK", @"BLUES", @"METAL", @"HIP-HOP", @"WORLD", @"JAZZ", @"CLASSICAL", @"REGGAE", @"ELECTRO", nil];
     self.indexSelectedArray = [[NSMutableArray alloc] initWithCapacity:self.styleArray.count];
     for(int i = 0; i < self.styleArray.count; i++) {
@@ -71,15 +73,15 @@
     [self.indexSelectedArray replaceObjectAtIndex:indexPath.item withObject:[NSNumber numberWithBool:selected]];
     //[self.collectionView reloadData];
     if(selected) {
-        /*[[BDUser sharedUser].preferredStyle addObject:[NSString stringWithFormat:@"%@", cell.title.text]];
-        NSLog(@"%@", cell.title.text);
-        NSLog(@"%@", [BDUser sharedUser].preferredStyle);*/
+        [self.titleArray addObject:[NSString stringWithFormat:@"%@", cell.title.text]];
+        [[BDUser sharedUser] setPreferredStyles:self.titleArray];
         
     } else {
-        /*[[BDUser sharedUser].preferredStyle removeObject:[NSString stringWithFormat:@"%@", cell.title.text]];
-        NSLog(@"%@", [BDUser sharedUser].preferredStyle);*/
-        
+        [self.titleArray removeObject:[NSString stringWithFormat:@"%@", cell.title.text]];
+        [[BDUser sharedUser] setPreferredStyles:self.titleArray];
     }
+    NSInteger *integer = [[BDUser sharedUser] getPreferredStyles].count;
+    [self.delegate changeButtonState: integer];
 }
 
 @end
