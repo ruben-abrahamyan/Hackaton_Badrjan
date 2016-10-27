@@ -78,7 +78,7 @@
         <!--Collection View Controller-->
         <scene sceneID="fsq-m2-hKm">
             <objects>
-                <collectionViewController id="qMO-bO-hTG" sceneMemberID="viewController">
+                <collectionViewController id="qMO-bO-hTG" customClass="BDCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xkc-lZ-96b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="501"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUk-Ye-Xfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="11"/>
+            <point key="canvasLocation" x="1526" y="44"/>
         </scene>
     </scenes>
 </document>
