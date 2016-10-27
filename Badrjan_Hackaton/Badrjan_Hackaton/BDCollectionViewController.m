@@ -48,13 +48,18 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-        /*BOOL selected = [self.indexSelectedArray[indexPath.item] boolValue];
-        cell.isSelected = selected;
-        [cell changeCellSize];*/
+
     // Configure the cell
+    NSString *string = self.styleArray[indexPath.item];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
     
-    cell.backgroundColor = [UIColor magentaColor];
-    cell.title.text = self.styleArray[indexPath.item];
+    float spacing = 4.0f;
+    [attributedString addAttribute:NSKernAttributeName
+                             value:@(spacing)
+                             range:NSMakeRange(0, [string length])];
+    
+    cell.title.attributedText = attributedString;
+    cell.backgroundImage.image = [UIImage imageNamed:[string lowercaseString]];
     return cell;
 }
 
