@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C0B6AE51DC1F59100FC0DA2 /* BDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */; };
+		616D4D091DC2252B00B000E4 /* MusicAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 616D4D081DC2252B00B000E4 /* MusicAPI.m */; };
+		616D4D0D1DC248A700B000E4 /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 616D4D0C1DC248A700B000E4 /* PlaylistViewController.m */; };
 		A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6A1DC1DA5F00AF11D7 /* main.m */; };
 		A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */; };
 		A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D701DC1DA5F00AF11D7 /* ViewController.m */; };
@@ -21,6 +23,10 @@
 /* Begin PBXFileReference section */
 		2C0B6AE31DC1F59100FC0DA2 /* BDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDUser.h; sourceTree = "<group>"; };
 		2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDUser.m; sourceTree = "<group>"; };
+		616D4D071DC2252B00B000E4 /* MusicAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicAPI.h; path = MusicAPI/MusicAPI.h; sourceTree = "<group>"; };
+		616D4D081DC2252B00B000E4 /* MusicAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicAPI.m; path = MusicAPI/MusicAPI.m; sourceTree = "<group>"; };
+		616D4D0B1DC248A700B000E4 /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaylistViewController.h; path = MusicControl/PlaylistViewController.h; sourceTree = "<group>"; };
+		616D4D0C1DC248A700B000E4 /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaylistViewController.m; path = MusicControl/PlaylistViewController.m; sourceTree = "<group>"; };
 		A9B00D661DC1DA5F00AF11D7 /* Badrjan_Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badrjan_Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B00D6A1DC1DA5F00AF11D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +63,24 @@
 			name = "Shared Instance";
 			sourceTree = "<group>";
 		};
+		616D4D061DC2248B00B000E4 /* MusicAPI */ = {
+			isa = PBXGroup;
+			children = (
+				616D4D071DC2252B00B000E4 /* MusicAPI.h */,
+				616D4D081DC2252B00B000E4 /* MusicAPI.m */,
+			);
+			name = MusicAPI;
+			sourceTree = "<group>";
+		};
+		616D4D0A1DC23D4C00B000E4 /* MusicControl */ = {
+			isa = PBXGroup;
+			children = (
+				616D4D0B1DC248A700B000E4 /* PlaylistViewController.h */,
+				616D4D0C1DC248A700B000E4 /* PlaylistViewController.m */,
+			);
+			name = MusicControl;
+			sourceTree = "<group>";
+		};
 		A9B00D5D1DC1DA5E00AF11D7 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +102,8 @@
 			children = (
 				2C0B6AE21DC1F41500FC0DA2 /* Shared Instance */,
 				A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */,
+				616D4D0A1DC23D4C00B000E4 /* MusicControl */,
+				616D4D061DC2248B00B000E4 /* MusicAPI */,
 				A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */,
 				A9B00D6F1DC1DA5F00AF11D7 /* ViewController.h */,
 				A9B00D701DC1DA5F00AF11D7 /* ViewController.m */,
@@ -178,6 +204,8 @@
 				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
 				A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */,
 				A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */,
+				616D4D0D1DC248A700B000E4 /* PlaylistViewController.m in Sources */,
+				616D4D091DC2252B00B000E4 /* MusicAPI.m in Sources */,
 				A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */,
 				A9B00D821DC2051700AF11D7 /* BDMainViewController.m in Sources */,
 			);
