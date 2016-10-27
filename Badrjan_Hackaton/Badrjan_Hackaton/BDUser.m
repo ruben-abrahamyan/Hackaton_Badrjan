@@ -18,7 +18,7 @@
 
 @property (strong, nonatomic) UIImage *targetPhoto;
 
-@property (strong, nonatomic) NSMutableArray *topMoods;
+@property (strong, nonatomic) MoodPercentages *moodPercentages;
 
 @property (strong, nonatomic) NSMutableArray *currentPlaylist;
 
@@ -46,59 +46,104 @@
 - (id)init {
     if (self = [super init]) {
         self.username = @"Default Nickname";
+        self.moodPercentages = [[MoodPercentages alloc] init];
     }
     return self;
 }
 
-- (NSString *)getUserName {
+
+- (NSString *)getUsername {
     return self.username;
 }
+
+- (void)setUsername:(NSString *)username {
+    self.username = username;
+}
+
 
 - (NSMutableArray *)getPreferredStyles {
     return self.preferredStyles;
 }
 
+- (void)setPreferredStyles:(NSMutableArray *)preferredStyles {
+    self.preferredStyles = preferredStyles;
+}
+
+
 - (UIImage *)getThumbnail {
     return self.thumbnail;
 }
+
+- (void)setThumbnail:(UIImage *)thumbnail {
+    self.thumbnail = thumbnail;
+}
+
 
 - (UIImage *)getTargetPhoto {
     return self.targetPhoto;
 }
 
-- (NSMutableArray *)getTopMoods {
-    return self.topMoods;
+- (void)setTargetPhoto:(UIImage *)targetPhoto {
+    self.targetPhoto = targetPhoto;
 }
+
+
+- (MoodPercentages *)getMoodPercentages {
+    return self.moodPercentages;
+}
+
+- (void)setMoodPercentages:(MoodPercentages *)moodPercentages {
+    self.moodPercentages = moodPercentages;
+}
+
 
 - (NSMutableArray *)getCurrentPlaylist {
     return self.currentPlaylist;
+}
+
+- (void)setCurrentPlaylist:(NSMutableArray *)currentPlaylist {
+    self.currentPlaylist = currentPlaylist;
 }
 
 - (NSMutableArray *)getReceivedSongs {
     return self.receivedSongs;
 }
 
-- (NSMutableArray *)getChosenMoods {
-    return self.getChosenMoods;
+
+- (void)setReceivedSongs:(NSMutableArray *)receivedSongs {
+    self.receivedSongs = receivedSongs;
 }
 
-#define kHappinessFactor
-#define kSadnessFactor
-#define kAngerFactor
-#define kDisgustFactor
-#define kFearFactor
-#define kSurpriseFactor
-#define kNeutralFactor
-#define kContemptFactor
+- (NSMutableArray *)getChosenMoods {
+    return self.chosenMoods;
+}
 
+- (void)setChosenMods:(NSMutableArray *)chosenMoods {
+    self.chosenMoods = chosenMoods;
+}
+
+#define kHappinessFactorX 1
+#define kSadnessFactorX 1
+#define kAngerFactorX 1
+#define kDisgustFactorX 1
+#define kFearFactorX 1
+#define kSurpriseFactorX 1
+#define kNeutralFactorX 1
+#define kContemptFactorX 1
+
+#define kHappinessFactorY 1
+#define kSadnessFactorY 1
+#define kAngerFactorY 1
+#define kDisgustFactorY 1
+#define kFearFactorY 1
+#define kSurpriseFactorY 1
+#define kNeutralFactorY 1
+#define kContemptFactorY 1
 
 
 - (CGPoint)getCoordinatesOfMood {
     CGFloat CoordinateX, CoordinateY;
-//    for (NSString *moodPercentage in self.topMoods) {
-//        CGFloat percentage = [moodPercentage floatValue];
-//        
-//    }
+    //TODO
     
     return CGPointMake(CoordinateX, CoordinateY);
 }
