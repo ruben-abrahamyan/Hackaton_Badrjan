@@ -12,6 +12,7 @@
 		953A62BE1DC27E9A009D7CD4 /* BDCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62B91DC27E9A009D7CD4 /* BDCameraViewController.m */; };
 		953A62BF1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */; };
 		953A62C01DC27E9A009D7CD4 /* BDYourMoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */; };
+		A949F89C1DC288B30073FBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A949F89A1DC288B30073FBBC /* Main.storyboard */; };
 		A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6A1DC1DA5F00AF11D7 /* main.m */; };
 		A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */; };
 		A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D701DC1DA5F00AF11D7 /* ViewController.m */; };
@@ -34,6 +35,7 @@
 		953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPhotoAnalyzingManager.m; sourceTree = "<group>"; };
 		953A62BC1DC27E9A009D7CD4 /* BDYourMoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDYourMoodViewController.h; sourceTree = "<group>"; };
 		953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDYourMoodViewController.m; sourceTree = "<group>"; };
+		A949F89B1DC288B30073FBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9B00D661DC1DA5F00AF11D7 /* Badrjan_Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badrjan_Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B00D6A1DC1DA5F00AF11D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */,
 				A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */,
 				A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */,
+				A949F89A1DC288B30073FBBC /* Main.storyboard */,
 				A9B00D7A1DC1DA5F00AF11D7 /* Info.plist */,
 				A9B00D691DC1DA5F00AF11D7 /* Supporting Files */,
 			);
@@ -189,6 +192,7 @@
 				A9B00D791DC1DA5F00AF11D7 /* LaunchScreen.storyboard in Resources */,
 				A9B00D761DC1DA5F00AF11D7 /* Assets.xcassets in Resources */,
 				A9B00D8A1DC21F3C00AF11D7 /* BDCollectionViewCell.xib in Resources */,
+				A949F89C1DC288B30073FBBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +220,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A949F89A1DC288B30073FBBC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A949F89B1DC288B30073FBBC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
