@@ -123,27 +123,54 @@
 }
 
 #define kHappinessFactorX 1
-#define kSadnessFactorX 1
-#define kAngerFactorX 1
-#define kDisgustFactorX 1
-#define kFearFactorX 1
-#define kSurpriseFactorX 1
-#define kNeutralFactorX 1
-#define kContemptFactorX 1
+#define kSadnessFactorX -1
+#define kAngerFactorX -0.5
+#define kDisgustFactorX -0.2
+#define kFearFactorX 0.5
+#define kSurpriseFactorX 0.5
+#define kNeutralFactorX 0
+#define kContemptFactorX -0.5
 
 #define kHappinessFactorY 1
-#define kSadnessFactorY 1
+#define kSadnessFactorY -1
 #define kAngerFactorY 1
-#define kDisgustFactorY 1
-#define kFearFactorY 1
-#define kSurpriseFactorY 1
-#define kNeutralFactorY 1
-#define kContemptFactorY 1
+#define kDisgustFactorY 0.5
+#define kFearFactorY 0.5
+#define kSurpriseFactorY 0.5
+#define kNeutralFactorY -0.5
+#define kContemptFactorY 0
 
 
 - (CGPoint)getCoordinatesOfMood {
     CGFloat CoordinateX, CoordinateY;
-    //TODO
+    
+    if (self.moodPercentages.Neutral > 0.5) {
+        CoordinateX = self.moodPercentages.Happiness * kHappinessFactorX + self.moodPercentages.Sadness * kSadnessFactorX + self.moodPercentages.Anger * kAngerFactorX + self.moodPercentages.Disgust * kDisgustFactorX + self.moodPercentages.Fear * kFearFactorX + self.moodPercentages.Surprise * kSurpriseFactorX + self.moodPercentages.Neutral * kNeutralFactorX + self.moodPercentages.Contempt * kContemptFactorX;
+        
+        CoordinateX *= 2;
+        
+        CoordinateX = MIN(MAX(CoordinateX, -1), 1);
+        CoordinateX = ((CoordinateX + 1) / 2.0) * 999999;
+        
+        CoordinateY = self.moodPercentages.Happiness * kHappinessFactorY + self.moodPercentages.Sadness * kSadnessFactorY + self.moodPercentages.Anger * kAngerFactorY + self.moodPercentages.Disgust * kDisgustFactorY + self.moodPercentages.Fear * kFearFactorY + self.moodPercentages.Surprise * kSurpriseFactorY + self.moodPercentages.Neutral * kNeutralFactorY + self.moodPercentages.Contempt * kContemptFactorY;
+        
+        CoordinateY *=2;
+        
+        CoordinateY = MIN(MAX(CoordinateY, -1), 1);
+        CoordinateY = ((CoordinateY + 1) / 2.0) * 999999;
+        
+    } else {
+        CoordinateX = self.moodPercentages.Happiness * kHappinessFactorX + self.moodPercentages.Sadness * kSadnessFactorX + self.moodPercentages.Anger * kAngerFactorX + self.moodPercentages.Disgust * kDisgustFactorX + self.moodPercentages.Fear * kFearFactorX + self.moodPercentages.Surprise * kSurpriseFactorX + self.moodPercentages.Neutral * kNeutralFactorX + self.moodPercentages.Contempt * kContemptFactorX;
+        
+        CoordinateX = MIN(MAX(CoordinateX, -1), 1);
+        CoordinateX = ((CoordinateX + 1) / 2.0) * 999999;
+        
+        CoordinateY = self.moodPercentages.Happiness * kHappinessFactorY + self.moodPercentages.Sadness * kSadnessFactorY + self.moodPercentages.Anger * kAngerFactorY + self.moodPercentages.Disgust * kDisgustFactorY + self.moodPercentages.Fear * kFearFactorY + self.moodPercentages.Surprise * kSurpriseFactorY + self.moodPercentages.Neutral * kNeutralFactorY + self.moodPercentages.Contempt * kContemptFactorY;
+        
+        CoordinateY = MIN(MAX(CoordinateY, -1), 1);
+        CoordinateY = ((CoordinateY + 1) / 2.0) * 999999;
+    }
+    
     
     return CGPointMake(CoordinateX, CoordinateY);
 }
