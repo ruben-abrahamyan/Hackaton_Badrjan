@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2C0B6AE51DC1F59100FC0DA2 /* BDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */; };
 		2C0B6AE81DC2634800FC0DA2 /* MoodPercentages.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B6AE71DC2634800FC0DA2 /* MoodPercentages.m */; };
+		953A62BE1DC27E9A009D7CD4 /* BDCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62B91DC27E9A009D7CD4 /* BDCameraViewController.m */; };
+		953A62BF1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */; };
+		953A62C01DC27E9A009D7CD4 /* BDYourMoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */; };
 		A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6A1DC1DA5F00AF11D7 /* main.m */; };
 		A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */; };
 		A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D701DC1DA5F00AF11D7 /* ViewController.m */; };
@@ -26,6 +29,12 @@
 		2C0B6AE41DC1F59100FC0DA2 /* BDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDUser.m; sourceTree = "<group>"; };
 		2C0B6AE61DC2634800FC0DA2 /* MoodPercentages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodPercentages.h; sourceTree = "<group>"; };
 		2C0B6AE71DC2634800FC0DA2 /* MoodPercentages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodPercentages.m; sourceTree = "<group>"; };
+		953A62B81DC27E9A009D7CD4 /* BDCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCameraViewController.h; sourceTree = "<group>"; };
+		953A62B91DC27E9A009D7CD4 /* BDCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCameraViewController.m; sourceTree = "<group>"; };
+		953A62BA1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPhotoAnalyzingManager.h; sourceTree = "<group>"; };
+		953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPhotoAnalyzingManager.m; sourceTree = "<group>"; };
+		953A62BC1DC27E9A009D7CD4 /* BDYourMoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDYourMoodViewController.h; sourceTree = "<group>"; };
+		953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDYourMoodViewController.m; sourceTree = "<group>"; };
 		A9B00D661DC1DA5F00AF11D7 /* Badrjan_Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badrjan_Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B00D6A1DC1DA5F00AF11D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +108,12 @@
 				A9B00D841DC2075500AF11D7 /* BDCollectionViewController.m */,
 				A9B00D801DC2051700AF11D7 /* BDMainViewController.h */,
 				A9B00D811DC2051700AF11D7 /* BDMainViewController.m */,
+				953A62B81DC27E9A009D7CD4 /* BDCameraViewController.h */,
+				953A62B91DC27E9A009D7CD4 /* BDCameraViewController.m */,
+				953A62BA1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.h */,
+				953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */,
+				953A62BC1DC27E9A009D7CD4 /* BDYourMoodViewController.h */,
+				953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */,
 				A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */,
 				A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */,
 				A9B00D7A1DC1DA5F00AF11D7 /* Info.plist */,
@@ -192,9 +207,12 @@
 				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
 				A9B00D891DC21F3C00AF11D7 /* BDCollectionViewCell.m in Sources */,
 				A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */,
+				953A62BF1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m in Sources */,
 				2C0B6AE81DC2634800FC0DA2 /* MoodPercentages.m in Sources */,
+				953A62BE1DC27E9A009D7CD4 /* BDCameraViewController.m in Sources */,
 				A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */,
 				A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */,
+				953A62C01DC27E9A009D7CD4 /* BDYourMoodViewController.m in Sources */,
 				A9B00D821DC2051700AF11D7 /* BDMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
