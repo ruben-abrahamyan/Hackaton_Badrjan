@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gTV-IL-0wX" customClass="BDCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Eyd-NL-Mg1"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEk-As-i3s">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Eyd-NL-Mg1" secondAttribute="trailing" id="W4l-Hs-g4u"/>
+                <constraint firstItem="Eyd-NL-Mg1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="X4k-Ly-olO"/>
+                <constraint firstItem="HEk-As-i3s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fD1-CQ-ljH"/>
+                <constraint firstAttribute="bottom" secondItem="HEk-As-i3s" secondAttribute="bottom" id="fdE-Ge-o5g"/>
+                <constraint firstAttribute="bottom" secondItem="Eyd-NL-Mg1" secondAttribute="bottom" id="mgA-k4-UMY"/>
+                <constraint firstItem="HEk-As-i3s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oLM-Wl-OLL"/>
+                <constraint firstAttribute="trailing" secondItem="HEk-As-i3s" secondAttribute="trailing" id="sqj-yR-l1F"/>
+                <constraint firstItem="Eyd-NL-Mg1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="szU-cC-EY1"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundImage" destination="Eyd-NL-Mg1" id="ahM-4u-QY2"/>
+                <outlet property="title" destination="HEk-As-i3s" id="y4y-hj-y5L"/>
+            </connections>
+            <point key="canvasLocation" x="-576" y="73"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image" width="435" height="318"/>
+    </resources>
+</document>

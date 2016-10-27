@@ -7,47 +7,58 @@
 //
 
 #import "BDCollectionViewController.h"
+#import "BDCollectionViewCell.h"
 
 @interface BDCollectionViewController ()
-
+@property (nonatomic, copy) NSArray *styleArray;
+@property (nonatomic) CGFloat cellWidth;
 @end
 
 @implementation BDCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.styleArray = [NSArray arrayWithObjects: @"POP", @"ROCK", @"BLUES", @"METAL", @"HIP-HOP", @"INDIE", @"JAZZ", @"CLASSICAL", @"REGGAE", @"ELECTRO", nil];
+    self.cellWidth = (self.collectionView.frame.size.width - 2)/2.f;
+    [self.collectionView registerNib:[UINib nibWithNibName:@"BDCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"Cell"];
 }
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 5;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return self.styleArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    BDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell
-    cell.backgroundColor = [UIColor redColor];
+    cell.backgroundColor = [UIColor magentaColor];
+    cell.title.text = self.styleArray[indexPath.item];
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
 
-- (CGSize)collectionView:(UICollectionView *)collectionView
-                  layout:(UICollectionViewLayout*)collectionViewLayout
-  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(50, 50);
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.cellWidth, self.cellWidth);
 }
+/*
+- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 2, 0); // top, left, bottom, right
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    
+    return 2;
+}*/
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {

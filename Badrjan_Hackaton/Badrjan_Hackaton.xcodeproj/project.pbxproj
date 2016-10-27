@@ -16,6 +16,8 @@
 		A9B00D791DC1DA5F00AF11D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */; };
 		A9B00D821DC2051700AF11D7 /* BDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D811DC2051700AF11D7 /* BDMainViewController.m */; };
 		A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D841DC2075500AF11D7 /* BDCollectionViewController.m */; };
+		A9B00D891DC21F3C00AF11D7 /* BDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D871DC21F3C00AF11D7 /* BDCollectionViewCell.m */; };
+		A9B00D8A1DC21F3C00AF11D7 /* BDCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9B00D881DC21F3C00AF11D7 /* BDCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		A9B00D811DC2051700AF11D7 /* BDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDMainViewController.m; sourceTree = "<group>"; };
 		A9B00D831DC2075500AF11D7 /* BDCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCollectionViewController.h; sourceTree = "<group>"; };
 		A9B00D841DC2075500AF11D7 /* BDCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCollectionViewController.m; sourceTree = "<group>"; };
+		A9B00D861DC21F3C00AF11D7 /* BDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCollectionViewCell.h; sourceTree = "<group>"; };
+		A9B00D871DC21F3C00AF11D7 /* BDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCollectionViewCell.m; sourceTree = "<group>"; };
+		A9B00D881DC21F3C00AF11D7 /* BDCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,9 @@
 				A9B00D6F1DC1DA5F00AF11D7 /* ViewController.h */,
 				A9B00D701DC1DA5F00AF11D7 /* ViewController.m */,
 				A9B00D721DC1DA5F00AF11D7 /* Main.storyboard */,
+				A9B00D861DC21F3C00AF11D7 /* BDCollectionViewCell.h */,
+				A9B00D871DC21F3C00AF11D7 /* BDCollectionViewCell.m */,
+				A9B00D881DC21F3C00AF11D7 /* BDCollectionViewCell.xib */,
 				A9B00D831DC2075500AF11D7 /* BDCollectionViewController.h */,
 				A9B00D841DC2075500AF11D7 /* BDCollectionViewController.m */,
 				A9B00D801DC2051700AF11D7 /* BDMainViewController.h */,
@@ -163,6 +171,7 @@
 			files = (
 				A9B00D791DC1DA5F00AF11D7 /* LaunchScreen.storyboard in Resources */,
 				A9B00D761DC1DA5F00AF11D7 /* Assets.xcassets in Resources */,
+				A9B00D8A1DC21F3C00AF11D7 /* BDCollectionViewCell.xib in Resources */,
 				A9B00D741DC1DA5F00AF11D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +185,7 @@
 			files = (
 				2C0B6AE51DC1F59100FC0DA2 /* BDUser.m in Sources */,
 				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
+				A9B00D891DC21F3C00AF11D7 /* BDCollectionViewCell.m in Sources */,
 				A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */,
 				A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */,
 				A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */,
