@@ -9,6 +9,8 @@
 #import "BDMainViewController.h"
 
 @interface BDMainViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end
 
