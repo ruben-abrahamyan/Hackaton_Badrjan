@@ -7,16 +7,9 @@
 //
 
 #import "BDYourMoodViewController.h"
-#import "BDMoodTableViewCell.h"
-#import "BDPhotoAnalyzingManager.h"
-#import "MoodPercentages.h"
-#import "BDUser.h"
 
-@interface BDYourMoodViewController () <UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface BDYourMoodViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *findMusic;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) NSArray *moodsArray;
 @end
 
 @implementation BDYourMoodViewController
@@ -24,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+<<<<<<< HEAD
     self.tableView.backgroundColor = [UIColor clearColor];
     self.findMusic.backgroundColor = [UIColor colorWithRed:145 / 255.0 green:215 / 255.0 blue:80 / 255.0 alpha:1.0];
     //[self.tableView registerClass:[BDMoodTableViewCell class] forCellReuseIdentifier:@"moodTableViewCell"];
@@ -89,40 +83,14 @@
     cell.layoutMargins = UIEdgeInsetsZero;
     
     return cell;
+=======
+>>>>>>> 2f57783fb0e8d4000cc927a86647e1b754ab10d0
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)openCamera {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self.navigationController presentViewController:picker animated:YES completion:NULL];
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    NSData *imageData = UIImageJPEGRepresentation(chosenImage, 1.0);
-    BDPhotoAnalyzingManager *analyzer = [[BDPhotoAnalyzingManager alloc] init];
-    [analyzer analyzeImage:imageData withCompletion:^(BOOL success, NSDictionary *result) {
-        MoodPercentages *percentages = [[MoodPercentages alloc] initWithDictionary:result];
-        [[BDUser sharedUser] setMoodPercentages:percentages];
-                dispatch_async(dispatch_get_main_queue(), ^{
-        [picker dismissViewControllerAnimated:YES completion:^{
-            //[self performSegueWithIdentifier:@"goToYourMoodViewControllerSegueIdentifier" sender:self];
-        }];
-                });
-    }];
-}
-
-- (void)tryAgain {
-    [self openCamera];
-}
-
 
 /*
 #pragma mark - Navigation
