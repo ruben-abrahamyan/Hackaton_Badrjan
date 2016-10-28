@@ -18,6 +18,10 @@
 		9561C97C1DC2BEB700F91B1A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9561C97B1DC2BEB700F91B1A /* MapKit.framework */; };
 		A949F89C1DC288B30073FBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A949F89A1DC288B30073FBBC /* Main.storyboard */; };
 		A949F89F1DC2C0FA0073FBBC /* BDLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A949F89E1DC2C0FA0073FBBC /* BDLoadViewController.m */; };
+		616D4D091DC2252B00B000E4 /* MusicAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 616D4D081DC2252B00B000E4 /* MusicAPI.m */; };
+		616D4D0D1DC248A700B000E4 /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 616D4D0C1DC248A700B000E4 /* PlaylistViewController.m */; };
+		616D4D101DC2529700B000E4 /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 616D4D0F1DC2529700B000E4 /* SongTableViewCell.m */; };
+		616D4D131DC27D4600B000E4 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 616D4D121DC27D4600B000E4 /* Song.m */; };
 		A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6A1DC1DA5F00AF11D7 /* main.m */; };
 		A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */; };
 		A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D701DC1DA5F00AF11D7 /* ViewController.m */; };
@@ -50,6 +54,14 @@
 		A949F89B1DC288B30073FBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A949F89D1DC2C0FA0073FBBC /* BDLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLoadViewController.h; sourceTree = "<group>"; };
 		A949F89E1DC2C0FA0073FBBC /* BDLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLoadViewController.m; sourceTree = "<group>"; };
+		616D4D071DC2252B00B000E4 /* MusicAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicAPI.h; path = MusicAPI/MusicAPI.h; sourceTree = "<group>"; };
+		616D4D081DC2252B00B000E4 /* MusicAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicAPI.m; path = MusicAPI/MusicAPI.m; sourceTree = "<group>"; };
+		616D4D0B1DC248A700B000E4 /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaylistViewController.h; path = MusicControl/PlaylistViewController.h; sourceTree = "<group>"; };
+		616D4D0C1DC248A700B000E4 /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaylistViewController.m; path = MusicControl/PlaylistViewController.m; sourceTree = "<group>"; };
+		616D4D0E1DC2529700B000E4 /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongTableViewCell.h; path = MusicControl/SongTableViewCell.h; sourceTree = "<group>"; };
+		616D4D0F1DC2529700B000E4 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongTableViewCell.m; path = MusicControl/SongTableViewCell.m; sourceTree = "<group>"; };
+		616D4D111DC27D4600B000E4 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		616D4D121DC27D4600B000E4 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		A9B00D661DC1DA5F00AF11D7 /* Badrjan_Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badrjan_Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B00D6A1DC1DA5F00AF11D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +107,26 @@
 				9561C97B1DC2BEB700F91B1A /* MapKit.framework */,
 			);
 			name = Frameworks;
+		616D4D061DC2248B00B000E4 /* MusicAPI */ = {
+			isa = PBXGroup;
+			children = (
+				616D4D071DC2252B00B000E4 /* MusicAPI.h */,
+				616D4D081DC2252B00B000E4 /* MusicAPI.m */,
+			);
+			name = MusicAPI;
+			sourceTree = "<group>";
+		};
+		616D4D0A1DC23D4C00B000E4 /* MusicControl */ = {
+			isa = PBXGroup;
+			children = (
+				616D4D0B1DC248A700B000E4 /* PlaylistViewController.h */,
+				616D4D0C1DC248A700B000E4 /* PlaylistViewController.m */,
+				616D4D0E1DC2529700B000E4 /* SongTableViewCell.h */,
+				616D4D0F1DC2529700B000E4 /* SongTableViewCell.m */,
+				616D4D111DC27D4600B000E4 /* Song.h */,
+				616D4D121DC27D4600B000E4 /* Song.m */,
+			);
+			name = MusicControl;
 			sourceTree = "<group>";
 		};
 		A9B00D5D1DC1DA5E00AF11D7 = {
@@ -121,6 +153,8 @@
 				2C0B6AE61DC2634800FC0DA2 /* MoodPercentages.h */,
 				2C0B6AE71DC2634800FC0DA2 /* MoodPercentages.m */,
 				A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */,
+				616D4D0A1DC23D4C00B000E4 /* MusicControl */,
+				616D4D061DC2248B00B000E4 /* MusicAPI */,
 				A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */,
 				A9B00D6F1DC1DA5F00AF11D7 /* ViewController.h */,
 				A9B00D701DC1DA5F00AF11D7 /* ViewController.m */,
@@ -240,6 +274,10 @@
 				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
 				2C0B6AEB1DC2BF0B00FC0DA2 /* BDMoodTableViewCell.m in Sources */,
 				A9B00D891DC21F3C00AF11D7 /* BDCollectionViewCell.m in Sources */,
+				616D4D131DC27D4600B000E4 /* Song.m in Sources */,
+				2C0B6AE51DC1F59100FC0DA2 /* BDUser.m in Sources */,
+				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
+				616D4D101DC2529700B000E4 /* SongTableViewCell.m in Sources */,
 				A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */,
 				953A62BF1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m in Sources */,
 				2C0B6AE81DC2634800FC0DA2 /* MoodPercentages.m in Sources */,
@@ -247,6 +285,8 @@
 				A949F89F1DC2C0FA0073FBBC /* BDLoadViewController.m in Sources */,
 				A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */,
 				9561C9761DC2964B00F91B1A /* BDLoginViewController.m in Sources */,
+				616D4D0D1DC248A700B000E4 /* PlaylistViewController.m in Sources */,
+				616D4D091DC2252B00B000E4 /* MusicAPI.m in Sources */,
 				A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */,
 				953A62C01DC27E9A009D7CD4 /* BDYourMoodViewController.m in Sources */,
 				A9B00D821DC2051700AF11D7 /* BDMainViewController.m in Sources */,
