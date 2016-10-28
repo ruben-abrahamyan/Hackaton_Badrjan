@@ -14,6 +14,7 @@ typedef void(^NetworkServiceResultBlock)(id result, NSError *error);
 
 + (void)getPlaylistFromMoodWithMaxPopularity:(NSString *)maxPopularity
                                minPopularity:(NSString *)minPopularity
+                                     genreNo:(NSString *)genreNo
                                 trackValence:(NSString *)trackValence
                                 trackArousal:(NSString *)trackArousal
                                 resultNumber:(NSString *)resultNumber
