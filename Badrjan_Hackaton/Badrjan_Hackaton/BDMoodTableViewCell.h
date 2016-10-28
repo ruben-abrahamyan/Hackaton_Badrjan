@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BDMoodTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *moodLabel;
 
 @end

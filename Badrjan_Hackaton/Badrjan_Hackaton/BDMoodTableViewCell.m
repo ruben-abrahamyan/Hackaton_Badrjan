@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.moodLabel.frame = CGRectMake(16, self.moodLabel.frame.origin.y, 200, self.moodLabel.bounds.size.height);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

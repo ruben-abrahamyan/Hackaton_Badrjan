@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BDYourMoodViewController : UIViewController
+@protocol BDYourMoodViewControllerDelegate <NSObject>
+- (void) openPicker;
+@end
 
+@interface BDYourMoodViewController : UIViewController
+@property (nonatomic,weak) id <BDYourMoodViewControllerDelegate> delegate;
 @end
