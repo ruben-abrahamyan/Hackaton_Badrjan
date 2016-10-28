@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What kind of music                           do you like" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Vrn-Nt-sII" userLabel="Title">
-                                <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="XgY-AV-yk6"/>
                                 </constraints>
@@ -357,7 +357,7 @@
             <objects>
                 <collectionViewController id="qMO-bO-hTG" customClass="BDCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xkc-lZ-96b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="457"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="501"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="wIe-zh-SNZ">
@@ -390,7 +390,7 @@
     </scenes>
     <resources>
         <image name="Artboard" width="320" height="568"/>
-        <image name="arrow" width="435" height="318"/>
+        <image name="arrow" width="14" height="12"/>
         <image name="emu_logo" width="131" height="181"/>
         <image name="next_green" width="14" height="12"/>
     </resources>

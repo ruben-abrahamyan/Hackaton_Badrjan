@@ -87,6 +87,7 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.preservesSuperviewLayoutMargins = false;
     cell.layoutMargins = UIEdgeInsetsZero;
+    
     return cell;
 }
 

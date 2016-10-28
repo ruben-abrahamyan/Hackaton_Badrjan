@@ -38,6 +38,8 @@
 
 - (CGPoint)getCoordinatesOfMood;
 
+- (NSArray *)getTop2Moods;
+
 + (instancetype)sharedUser;
 
 @end
