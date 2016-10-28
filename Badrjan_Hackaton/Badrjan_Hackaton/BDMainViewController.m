@@ -8,8 +8,9 @@
 #import "BDMainViewController.h"
 #import "BDPhotoAnalyzingManager.h"
 #import "BDUser.h"
+#import "BDYourMoodViewController.h"
 
-@interface BDMainViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface BDMainViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate,BDYourMoodViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (nonatomic) BOOL buttonEnabled;
@@ -27,7 +28,7 @@ alpha:1.0]
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor colorWithRed:37 / 255.0 green:37 / 255.0 blue:37 / 255.0 alpha:1.0];
 }
 
 - (void)changeButtonState: (NSInteger *)count {
@@ -84,9 +85,11 @@ alpha:1.0]
     [analyzer analyzeImage:imageData withCompletion:^(BOOL success, NSDictionary *result) {
         MoodPercentages *percentages = [[MoodPercentages alloc] initWithDictionary:result];
         [[BDUser sharedUser] setMoodPercentages:percentages];
-    }];
-    [picker dismissViewControllerAnimated:YES completion:^{
-        [self performSegueWithIdentifier:@"goToYourMoodViewControllerSegueIdentifier" sender:self];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [picker dismissViewControllerAnimated:YES completion:^{
+            [self performSegueWithIdentifier:@"goToYourMoodViewControllerSegueIdentifier" sender:self];
+            }];
+        });
     }];
 }
 

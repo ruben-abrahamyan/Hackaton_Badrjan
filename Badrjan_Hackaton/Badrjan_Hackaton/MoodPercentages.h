@@ -21,5 +21,6 @@
 @property (nonatomic) CGFloat surprise;
 
 - (id)initWithDictionary:(NSDictionary *) dict;
+- (NSArray *)getArrayOfMoodsWithValues;
 
 @end
