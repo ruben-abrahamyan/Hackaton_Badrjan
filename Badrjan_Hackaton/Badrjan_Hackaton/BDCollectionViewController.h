@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BDCollectionViewController : UICollectionViewController
+@protocol ChangeButtonState <NSObject>
 
+- (void)changeButtonState: (NSInteger *)count;
+
+@end
+@interface BDCollectionViewController : UICollectionViewController
+@property (nonatomic) id <ChangeButtonState> delegate;
 @end
