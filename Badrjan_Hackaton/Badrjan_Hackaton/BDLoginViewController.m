@@ -7,34 +7,26 @@
 //
 
 #import "BDLoginViewController.h"
-
+#import "BDLoadViewController.h"
 @interface BDLoginViewController ()
-
+@property(nonatomic) BDLoadViewController *loader;
 @end
 
 @implementation BDLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor blackColor];
+    self.loader = [[BDLoadViewController alloc] init];
+    [self.loader show];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+         [self.loader close];
+    });
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 - (IBAction)loginButtonPressed:(id)sender {
     [self performSegueWithIdentifier:@"goToMainSegueIdentifier" sender:self];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
