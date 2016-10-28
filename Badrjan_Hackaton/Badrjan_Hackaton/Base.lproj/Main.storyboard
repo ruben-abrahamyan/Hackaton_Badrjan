@@ -155,7 +155,7 @@ Songs</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w6I-oA-ILn">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="56" id="Faz-ik-smy" customClass="SongTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
@@ -166,9 +166,10 @@ Songs</string>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qow-Q7-fbi">
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="qow-Q7-fbi" secondAttribute="height" multiplier="1:1" id="Wvm-Ii-46K"/>
                                                         <constraint firstAttribute="width" constant="30" id="seV-rU-MR7"/>
                                                     </constraints>
-                                                    <state key="normal" title="play" image="viNextCopy"/>
+                                                    <state key="normal" title=" " image="viNextCopy"/>
                                                     <state key="selected" image="viPauseCopy"/>
                                                     <connections>
                                                         <action selector="playButtonPressed:" destination="Faz-ik-smy" eventType="touchUpInside" id="WqN-us-L3O"/>
@@ -177,7 +178,7 @@ Songs</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist - Song Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dar-l9-Qdi">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19.5" id="WHq-lG-tt7"/>
-                                                        <constraint firstAttribute="width" constant="231" id="z5o-tt-JII"/>
+                                                        <constraint firstAttribute="width" constant="230" id="z5o-tt-JII"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -206,11 +207,11 @@ Songs</string>
                                                 <constraint firstAttribute="trailing" secondItem="vYL-Sh-yPM" secondAttribute="trailing" constant="8" id="7zm-QD-rPn"/>
                                                 <constraint firstItem="KvV-Dr-AuK" firstAttribute="baseline" secondItem="qow-Q7-fbi" secondAttribute="baseline" id="B9i-7h-G3r"/>
                                                 <constraint firstItem="KvV-Dr-AuK" firstAttribute="baseline" secondItem="qow-Q7-fbi" secondAttribute="firstBaseline" id="KLJ-dF-42S"/>
-                                                <constraint firstItem="dar-l9-Qdi" firstAttribute="leading" secondItem="qow-Q7-fbi" secondAttribute="trailing" constant="6" id="VQS-eJ-Rsp"/>
+                                                <constraint firstItem="dar-l9-Qdi" firstAttribute="leading" secondItem="qow-Q7-fbi" secondAttribute="trailing" constant="7" id="VQS-eJ-Rsp"/>
                                                 <constraint firstItem="KvV-Dr-AuK" firstAttribute="top" secondItem="dar-l9-Qdi" secondAttribute="top" id="fTF-43-hS3"/>
                                                 <constraint firstItem="KvV-Dr-AuK" firstAttribute="leading" secondItem="dar-l9-Qdi" secondAttribute="trailing" constant="11" id="l4n-YD-pGB"/>
                                                 <constraint firstItem="KvV-Dr-AuK" firstAttribute="centerY" secondItem="vYL-Sh-yPM" secondAttribute="centerY" id="mKL-e6-VOv"/>
-                                                <constraint firstItem="dar-l9-Qdi" firstAttribute="leading" secondItem="qow-Q7-fbi" secondAttribute="trailing" constant="6" id="oTt-rg-PEv"/>
+                                                <constraint firstItem="dar-l9-Qdi" firstAttribute="leading" secondItem="qow-Q7-fbi" secondAttribute="trailing" constant="7" id="oTt-rg-PEv"/>
                                                 <constraint firstItem="dar-l9-Qdi" firstAttribute="top" secondItem="kgE-4A-fJI" secondAttribute="top" constant="15" id="rDA-7Z-vB1"/>
                                             </constraints>
                                         </tableViewCellContentView>

@@ -46,6 +46,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     NSString *genreNo = @"";
     if (self.genresToExclude.count) {
         for (NSString *string in self.genresToExclude) {
@@ -178,6 +180,7 @@
     
     
 }
+
 
 - (void)playAudioPlayerWithURL:(NSURL *)songUrl {
     if (self.audioPlayer) {
