@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BDCollectionViewController.h"
 
-@interface BDMainViewController : UIViewController
-
+@interface BDMainViewController : UIViewController <ChangeButtonState>
+- (void)changeButtonState: (NSInteger *)count ;
 @end

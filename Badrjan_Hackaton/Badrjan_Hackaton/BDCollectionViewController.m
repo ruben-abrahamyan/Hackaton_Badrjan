@@ -7,74 +7,86 @@
 //
 
 #import "BDCollectionViewController.h"
+#import "BDCollectionViewCell.h"
+#import "BDUser.h"
 
 @interface BDCollectionViewController ()
-
+@property (nonatomic, strong) NSArray *styleArray;
+@property (nonatomic, strong) NSMutableArray *indexSelectedArray;
+@property (nonatomic) CGFloat cellWidth;
+@property (nonatomic) CGFloat cellHeight;
+@property (nonatomic, strong) NSMutableArray *titleArray;
 @end
 
 @implementation BDCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.titleArray = [[NSMutableArray alloc] init];
+    self.styleArray = [NSArray arrayWithObjects: @"POP", @"ROCK", @"BLUES", @"METAL", @"HIP-HOP", @"WORLD", @"JAZZ", @"CLASSICAL", @"REGGAE", @"ELECTRO", nil];
+    self.indexSelectedArray = [[NSMutableArray alloc] initWithCapacity:self.styleArray.count];
+    for(int i = 0; i < self.styleArray.count; i++) {
+        [self.indexSelectedArray addObject:[NSNumber numberWithBool:NO]];
+    }
+    self.cellWidth = (self.collectionView.frame.size.width - 2)/2.f;
+    self.cellHeight = 138.f/159.f * self.cellWidth;
+    [self.collectionView registerNib:[UINib nibWithNibName:@"BDCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"Cell"];
 }
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 5;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return self.styleArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
+    BDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+
     // Configure the cell
-    cell.backgroundColor = [UIColor redColor];
+    NSString *string = self.styleArray[indexPath.item];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    float spacing = 4.0f;
+    [attributedString addAttribute:NSKernAttributeName
+                             value:@(spacing)
+                             range:NSMakeRange(0, [string length])];
+    
+    cell.title.attributedText = attributedString;
+    cell.backgroundImage.image = [UIImage imageNamed:[string lowercaseString]];
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
 
-- (CGSize)collectionView:(UICollectionView *)collectionView
-                  layout:(UICollectionViewLayout*)collectionViewLayout
-  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(50, 50);
-}
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.cellWidth, self.cellHeight);
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    BDCollectionViewCell *cell = (BDCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    BOOL selected = [self.indexSelectedArray[indexPath.item] boolValue];
+    selected = !selected;
+    cell.cellIsSelected = selected;
+    [cell changeCellSize];
+    [self.indexSelectedArray replaceObjectAtIndex:indexPath.item withObject:[NSNumber numberWithBool:selected]];
+    //[self.collectionView reloadData];
+    if(selected) {
+        [self.titleArray addObject:[NSString stringWithFormat:@"%@", cell.title.text]];
+        [[BDUser sharedUser] setPreferredStyles:self.titleArray];
+        
+    } else {
+        [self.titleArray removeObject:[NSString stringWithFormat:@"%@", cell.title.text]];
+        [[BDUser sharedUser] setPreferredStyles:self.titleArray];
+    }
+    NSInteger *integer = [[BDUser sharedUser] getPreferredStyles].count;
+    [self.delegate changeButtonState: integer];
 }
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

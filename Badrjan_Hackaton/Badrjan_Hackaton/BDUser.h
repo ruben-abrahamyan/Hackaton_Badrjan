@@ -8,26 +8,36 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "MoodPercentages.h"
 
 @interface BDUser : NSObject
 
-@property (strong, nonatomic) NSString *username;
+- (NSString *)getUsername;
+- (void)setUsername:(NSString *)username;
 
-@property (strong, nonatomic) NSMutableArray *preferredStyle;
+- (NSMutableArray *)getPreferredStyles;
+- (void)setPreferredStyles:(NSMutableArray *)preferredStyles;
 
-@property (strong, nonatomic) UIImage *thumbnail;
+- (UIImage *)getThumbnail;
+- (void)setThumbnail:(UIImage *)thumbnail;
 
-@property (strong, nonatomic) UIImage *targetPhoto;
+- (UIImage *)getTargetPhoto;
+- (void)setTargetPhoto:(UIImage *)targetPhoto;
 
-@property (strong, nonatomic) NSMutableArray *topMoods;
+- (MoodPercentages *)getMoodPercentages;
+- (void)setMoodPercentages:(MoodPercentages *)moodPercentages;
 
-@property (strong, nonatomic) NSMutableArray *currentPlaylist;
+- (NSMutableArray *)getCurrentPlaylist;
+- (void)setCurrentPlaylist:(NSMutableArray *)currentPlaylist;
 
-@property (strong, nonatomic) NSMutableArray *receivedSongs;
+- (NSMutableArray *)getReceivedSongs;
+- (void)setReceivedSongs:(NSMutableArray *)receivedSongs;
 
-@property (strong, nonatomic) NSMutableArray *chosenMoods;
+- (NSMutableArray *)getChosenMoods;
+- (void)setChosenMods:(NSMutableArray *)chosenMoods;
 
+- (CGPoint)getCoordinatesOfMood;
 
-
++ (instancetype)sharedUser;
 
 @end
