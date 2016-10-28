@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCs-sL-Ma1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="-325"/>
+            <point key="canvasLocation" x="2961" y="-391"/>
         </scene>
         <!--Item-->
         <scene sceneID="GVr-Nl-PaF">
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afS-rl-M2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3697" y="-325"/>
+            <point key="canvasLocation" x="3697" y="-392"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="s9A-Qi-u0s">
@@ -241,7 +241,7 @@
         <scene sceneID="fsq-m2-hKm">
             <objects>
                 <collectionViewController id="qMO-bO-hTG" customClass="BDCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xkc-lZ-96b">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xkc-lZ-96b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="457"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
