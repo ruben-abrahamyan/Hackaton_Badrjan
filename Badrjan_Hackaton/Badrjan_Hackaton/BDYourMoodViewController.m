@@ -27,7 +27,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.findMusic.backgroundColor = [UIColor colorWithRed:145 / 255.0 green:215 / 255.0 blue:80 / 255.0 alpha:1.0];
     //[self.tableView registerClass:[BDMoodTableViewCell class] forCellReuseIdentifier:@"moodTableViewCell"];
-    self.moodsArray = @[@"Sad",@"Happy"];
+//    self.moodsArray = [[BDUser sharedUser] getTop2Moods];
     
     [self.tableView setSeparatorColor:[UIColor clearColor]];
     [self.tableView setSeparatorInset:UIEdgeInsetsMake(1, 0, 1, 0)];
@@ -75,19 +75,30 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.moodsArray = [[BDUser sharedUser] getTop2Moods];
+}
+
+- (void)setMoodsArray:(NSArray *)moodsArray {
+    _moodsArray = moodsArray;
+    [self.tableView reloadData];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.moodsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BDMoodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"moodTableViewCell"];
-    cell.moodLabel.text = self.moodsArray[indexPath.row];
     cell.moodLabel.textColor = [UIColor whiteColor];
     cell.contentView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
     cell.backgroundColor = [UIColor clearColor];
     cell.preservesSuperviewLayoutMargins = false;
     cell.layoutMargins = UIEdgeInsetsZero;
     
+    cell.moodLabel.text = self.moodsArray[indexPath.row];
+
     return cell;
 }
 

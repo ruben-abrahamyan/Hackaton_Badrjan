@@ -171,14 +171,72 @@
 
 - (NSArray *)getTop2Moods {
     NSArray *moods = [self.moodPercentages getArrayOfMoodsWithValues];
-    
-    return [moods sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+
+    NSArray *sortedArray = [moods sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+
         if ([obj1 floatValue] > [obj2 floatValue])
             return NSOrderedDescending;
         else if ([obj1 floatValue] < [obj2 floatValue])
             return NSOrderedAscending;
         return NSOrderedSame;
     }];
+    
+    NSArray *top2Moods = [NSArray arrayWithObjects: sortedArray[7], sortedArray[6], nil];
+    
+    NSMutableArray *top2MoodNames = [[NSMutableArray alloc] init];
+    
+    if ([sortedArray[7] floatValue] == self.moodPercentages.happiness) {
+        [top2MoodNames addObject:@"happiness"];
+    }
+    if ([sortedArray[7] floatValue] == self.moodPercentages.anger) {
+        [top2MoodNames addObject:@"anger"];
+    }
+    if ([sortedArray[7] floatValue] == self.moodPercentages.surprise) {
+        [top2MoodNames addObject:@"surprise"];
+    }
+    if ([sortedArray[7] floatValue] == self.moodPercentages.contempt) {
+        [top2MoodNames addObject:@"contempt"];
+    }
+    if ([sortedArray[7] floatValue] == self.moodPercentages.fear) {
+        [top2MoodNames addObject:@"fear"];
+    }
+    if ([sortedArray[7] floatValue] == self.moodPercentages.disgust) {
+        [top2MoodNames addObject:@"disgust"];
+    }
+    if ([sortedArray[7] floatValue] == self.moodPercentages.sadness) {
+        [top2MoodNames addObject:@"sadness"];
+    }
+    if ([sortedArray[7] floatValue] == self.moodPercentages.neutral) {
+        [top2MoodNames addObject:@"neutral"];
+    }
+    
+    if ([sortedArray[6] floatValue] == self.moodPercentages.happiness) {
+        [top2MoodNames addObject:@"happiness"];
+    }
+    if ([sortedArray[6] floatValue] == self.moodPercentages.anger) {
+        [top2MoodNames addObject:@"anger"];
+    }
+    if ([sortedArray[6] floatValue] == self.moodPercentages.surprise) {
+        [top2MoodNames addObject:@"surprise"];
+    }
+    if ([sortedArray[6] floatValue] == self.moodPercentages.contempt) {
+        [top2MoodNames addObject:@"contempt"];
+    }
+    if ([sortedArray[6] floatValue] == self.moodPercentages.fear) {
+        [top2MoodNames addObject:@"fear"];
+    }
+    if ([sortedArray[6] floatValue] == self.moodPercentages.disgust) {
+        [top2MoodNames addObject:@"disgust"];
+    }
+    if ([sortedArray[6] floatValue] == self.moodPercentages.sadness) {
+        [top2MoodNames addObject:@"sadness"];
+    }
+    if ([sortedArray[6] floatValue] == self.moodPercentages.neutral) {
+        [top2MoodNames addObject:@"neutral"];
+    }
+    
+    
+    return top2MoodNames;
 }
 
 @end
