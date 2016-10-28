@@ -136,13 +136,10 @@
 				953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */,
 				9561C9741DC2964B00F91B1A /* BDLoginViewController.h */,
 				9561C9751DC2964B00F91B1A /* BDLoginViewController.m */,
-<<<<<<< HEAD
 				9561C9771DC2AC6900F91B1A /* BDTabBarController.h */,
 				9561C9781DC2AC6900F91B1A /* BDTabBarController.m */,
-=======
 				A949F89D1DC2C0FA0073FBBC /* BDLoadViewController.h */,
 				A949F89E1DC2C0FA0073FBBC /* BDLoadViewController.m */,
->>>>>>> 647ada9b21a4dea0236037aaf9a17d9e1b2db72b
 				A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */,
 				A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */,
 				A949F89A1DC288B30073FBBC /* Main.storyboard */,
