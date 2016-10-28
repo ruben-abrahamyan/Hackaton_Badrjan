@@ -10,4 +10,7 @@
 
 @interface PlaylistViewController : ViewController
 
+@property (nonatomic) NSArray *genresToExclude;
+@property (nonatomic) CGPoint *pointForMood;
+
 @end

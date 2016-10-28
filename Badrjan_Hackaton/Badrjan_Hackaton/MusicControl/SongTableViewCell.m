@@ -32,7 +32,7 @@
 
 - (void)configureCellWithSong:(Song *)song {
     self.songNameLabel.text = [NSString stringWithFormat:@"%@ - %@", song.artistName, song.songTitle];
-    self.durationLabel.text = [NSString stringWithFormat:@"00:10"];
+    self.durationLabel.text = [NSString stringWithFormat:@"00:30"];
 }
 
 - (void)prepareForReuse {
@@ -41,6 +41,7 @@
 }
 
 - (IBAction)playButtonPressed:(id)sender {
+    self.playButton.selected = !self.playButton.selected;
     if ([self.delegate respondsToSelector:@selector(didPressPlayCellAtIndex:)]) {
         [self.delegate didPressPlayCellAtIndex:self.index];
     }

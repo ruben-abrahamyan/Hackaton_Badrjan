@@ -46,8 +46,32 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    NSString *genreNo = @"";
+    if (self.genresToExclude.count) {
+        for (NSString *string in self.genresToExclude) {
+            [genreNo stringByAppendingString:[NSString stringWithFormat:@",%@", string]];
+        }
+    } else {
+        genreNo = @"rock";
+    }
     
-    [MusicAPI getPlaylistFromMoodWithMaxPopularity:[NSString stringWithFormat:@"100"] minPopularity:[NSString stringWithFormat:@"20"] genreNo:@"rock" trackValence:[NSString stringWithFormat:@"900000"] trackArousal:[NSString stringWithFormat:@"100000"] resultNumber:[NSString stringWithFormat:@"25"] withCompletion:^(id result, NSError *error) {
+    NSString *valence = @"";
+    NSString *arousal = @"";
+    
+    if (self.pointForMood) {
+        valence = [NSString stringWithFormat:@"%f", self.pointForMood->x];
+        arousal = [NSString stringWithFormat:@"%f", self.pointForMood->y];
+    } else {
+        valence = @"900000";
+        arousal = @"100000";
+    }
+    
+    if (!valence) {
+        valence = @"900000";
+        arousal = @"100000";
+    }
+    
+    [MusicAPI getPlaylistFromMoodWithMaxPopularity:[NSString stringWithFormat:@"100"] minPopularity:[NSString stringWithFormat:@"50"] genreNo:genreNo trackValence:valence trackArousal:arousal resultNumber:[NSString stringWithFormat:@"7"] withCompletion:^(id result, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", error);
         } else if ([result isKindOfClass:[NSDictionary class]]) {
@@ -135,14 +159,19 @@
                                                          NSURLResponse * _Nullable response,
                                                          NSError * _Nullable error) {
                                          
-                                         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                         NSDictionary *firstDict = [json[@"results"] objectAtIndex:0];
-                                         self.selectedSong.itPlayableUrl = [NSURL URLWithString:firstDict[@"previewUrl"]] ;
-                                         
-                                         dispatch_async(dispatch_get_main_queue(), ^{
-                                             [data writeToFile:songPath atomically:YES];
-                                             selectedCell.playButton.enabled = YES;
-                                         });
+                                         if (data) {
+                                             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                             NSDictionary *firstDict = [json[@"results"] objectAtIndex:0];
+                                             self.selectedSong.itPlayableUrl = [NSURL URLWithString:firstDict[@"previewUrl"]] ;
+                                             
+                                             dispatch_async(dispatch_get_main_queue(), ^{
+                                                 [data writeToFile:songPath atomically:YES];
+                                                 [self.audioPlayer pause];
+                                                 selectedCell.playButton.enabled = YES;
+                                             });
+                                         } else {
+                                             NSLog(@"NO ITUNES!");
+                                         }
                                          
                                      }] resume];
     }
@@ -162,11 +191,7 @@
 
 
     [self playAudioPlayerWithURL:self.selectedSong.itPlayableUrl];
-    
-    
-    
-    //NSString *playableUrlString = [song.downloadedPath stringByAppendingString:@"m4a"];
-    //[self playAudioPlayerWithURL:[NSURL URLWithString:playableUrlString]];
+
     
 }
 /*
