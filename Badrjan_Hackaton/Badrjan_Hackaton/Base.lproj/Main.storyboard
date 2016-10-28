@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fOp-jD-9Tt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9pF-1M-n7m">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -129,6 +130,16 @@
                     <view key="view" contentMode="scaleToFill" id="afW-m1-xc0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVJ-v7-q7g">
+                                <frame key="frameInset" minX="172" minY="281" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="9pF-1M-n7m" kind="push" id="RyQ-To-2Pv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vWa-Rh-Pmh"/>
@@ -140,7 +151,7 @@
             </objects>
             <point key="canvasLocation" x="1282" y="2"/>
         </scene>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="2Dt-W7-bwQ">
             <objects>
                 <viewController id="vjQ-eP-39P" sceneMemberID="viewController">
@@ -151,15 +162,56 @@
                     <view key="view" contentMode="scaleToFill" id="enE-5Z-aHy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zDU-4v-Bma"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnT-Wd-dhJ">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape" translatesAutoresizingMaskIntoConstraints="NO" id="E3F-as-GjO">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="E3F-as-GjO" secondAttribute="height" multiplier="1:1" id="Auf-aE-Cay"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Map" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itX-tT-zul">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="itX-tT-zul" secondAttribute="height" multiplier="56:73" id="fF9-vt-iuK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                        <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="E3F-as-GjO" secondAttribute="bottom" constant="23" id="3gX-3L-aLx"/>
+                                    <constraint firstAttribute="height" constant="106" id="InZ-1K-agu"/>
+                                    <constraint firstAttribute="bottom" secondItem="itX-tT-zul" secondAttribute="bottom" constant="16" id="TL3-b8-ymb"/>
+                                    <constraint firstAttribute="trailing" secondItem="E3F-as-GjO" secondAttribute="trailing" constant="14" id="YfZ-tt-oHC"/>
+                                    <constraint firstItem="itX-tT-zul" firstAttribute="top" secondItem="EnT-Wd-dhJ" secondAttribute="top" constant="17" id="cqa-j4-yfx"/>
+                                    <constraint firstItem="itX-tT-zul" firstAttribute="leading" secondItem="EnT-Wd-dhJ" secondAttribute="leading" constant="14" id="kPi-6k-pGd"/>
+                                    <constraint firstItem="E3F-as-GjO" firstAttribute="top" secondItem="EnT-Wd-dhJ" secondAttribute="top" constant="23" id="po2-HF-YHv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EnT-Wd-dhJ" firstAttribute="top" secondItem="zDU-4v-Bma" secondAttribute="top" id="2fu-kH-Tp7"/>
+                            <constraint firstAttribute="bottom" secondItem="zDU-4v-Bma" secondAttribute="bottom" id="2ze-Pn-NbU"/>
+                            <constraint firstItem="zDU-4v-Bma" firstAttribute="leading" secondItem="enE-5Z-aHy" secondAttribute="leading" id="6A2-qj-KOg"/>
+                            <constraint firstItem="EnT-Wd-dhJ" firstAttribute="leading" secondItem="enE-5Z-aHy" secondAttribute="leading" id="Qtt-BV-WbY"/>
+                            <constraint firstAttribute="trailing" secondItem="EnT-Wd-dhJ" secondAttribute="trailing" id="RaW-qh-zka"/>
+                            <constraint firstItem="zDU-4v-Bma" firstAttribute="top" secondItem="enE-5Z-aHy" secondAttribute="top" id="Tmq-5h-GuF"/>
+                            <constraint firstAttribute="trailing" secondItem="zDU-4v-Bma" secondAttribute="trailing" id="X3N-c0-hSj"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="TK2-RA-XNM"/>
+                    <tabBarItem key="tabBarItem" title="" image="location" id="TK2-RA-XNM">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blv-os-KaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="330"/>
+            <point key="canvasLocation" x="2960.8000000000002" y="329.68515742128938"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="dQq-MT-WlE">
             <objects>
                 <viewController id="cSn-YU-AbI" sceneMemberID="viewController">
@@ -172,13 +224,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="oLw-YN-fvW"/>
+                    <tabBarItem key="tabBarItem" title="" image="notification" id="oLw-YN-fvW">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzd-2U-Xri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3697" y="344"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
+        <scene sceneID="0in-1A-xxY">
+            <objects>
+                <viewController id="LJJ-eb-mJc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zt1-Rt-vBT"/>
+                        <viewControllerLayoutGuide type="bottom" id="3DS-h1-fcP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fqd-gZ-eUF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icTabExploreInactive" id="6nL-A6-1G4">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYY-lR-pXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4471" y="159"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="Q1b-Tm-YJi">
             <objects>
                 <viewController id="ach-BB-fxK" sceneMemberID="viewController">
@@ -191,13 +267,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="6gQ-Lr-jYA"/>
+                    <tabBarItem key="tabBarItem" title="" image="musicWhite" selectedImage="musicWhite" id="6gQ-Lr-jYA">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCs-sL-Ma1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2961" y="-391"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="GVr-Nl-PaF">
             <objects>
                 <viewController id="M4C-dy-4oF" sceneMemberID="viewController">
@@ -210,7 +288,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="U5t-di-Zln"/>
+                    <tabBarItem key="tabBarItem" title="" image="notification" id="U5t-di-Zln">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afS-rl-M2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,18 +299,28 @@
         <!--Tab Bar Controller-->
         <scene sceneID="s9A-Qi-u0s">
             <objects>
-                <tabBarController id="9pF-1M-n7m" sceneMemberID="viewController">
+                <tabBarController id="9pF-1M-n7m" customClass="BDTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="2Pr-Uo-foa"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bBX-oy-AnL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.5607843137254902" green="0.85098039215686272" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.56078431370000004" green="0.85098039219999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.50588235294117645" green="0.82352941176470584" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="ach-BB-fxK" kind="relationship" relationship="viewControllers" id="txe-TO-C9u"/>
                         <segue destination="vjQ-eP-39P" kind="relationship" relationship="viewControllers" id="Xow-5N-1oJ"/>
                         <segue destination="cSn-YU-AbI" kind="relationship" relationship="viewControllers" id="VEL-qN-q6i"/>
                         <segue destination="M4C-dy-4oF" kind="relationship" relationship="viewControllers" id="seN-R0-1w9"/>
+                        <segue destination="LJJ-eb-mJc" kind="relationship" relationship="viewControllers" id="zHb-4a-AzS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3T-ea-BeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -273,4 +363,14 @@
             <point key="canvasLocation" x="561" y="-635"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icTabExploreInactive" width="30" height="30"/>
+        <image name="location" width="30" height="30"/>
+        <image name="musicWhite" width="30" height="30"/>
+        <image name="notification" width="30" height="30"/>
+        <image name="shape" width="60" height="60"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RyQ-To-2Pv"/>
+    </inferredMetricsTieBreakers>
 </document>
