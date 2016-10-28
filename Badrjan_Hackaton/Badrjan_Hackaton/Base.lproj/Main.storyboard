@@ -116,21 +116,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your favourite genres" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrn-Nt-sII" userLabel="Title">
-                                <color key="backgroundColor" red="0.44120302288854862" green="1" blue="0.78423462823534407" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What kind of music                           do you like" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Vrn-Nt-sII" userLabel="Title">
+                                <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="XgY-AV-yk6"/>
+                                    <constraint firstAttribute="height" constant="58" id="XgY-AV-yk6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08a-ls-s9s">
-                                <color key="backgroundColor" red="0.42113089089804234" green="1" blue="0.7635484154960861" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08a-ls-s9s">
+                                <color key="backgroundColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="aYO-if-75g"/>
                                 </constraints>
-                                <state key="normal" title="Pick at least 3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Pick at least 3 to Continue">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="goToNextController:" destination="kQx-5S-mhD" eventType="touchUpInside" id="3Xr-S8-vaK"/>
                                 </connections>
@@ -141,17 +144,17 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="08a-ls-s9s" secondAttribute="trailing" id="E63-CO-iud"/>
-                            <constraint firstAttribute="trailing" secondItem="Vrn-Nt-sII" secondAttribute="trailing" id="L52-XZ-K9A"/>
+                            <constraint firstAttribute="trailing" secondItem="Vrn-Nt-sII" secondAttribute="trailing" constant="58" id="L52-XZ-K9A"/>
                             <constraint firstItem="08a-ls-s9s" firstAttribute="leading" secondItem="MUK-cF-RaH" secondAttribute="leading" id="N9v-Bu-P3P"/>
                             <constraint firstItem="rXc-GY-v40" firstAttribute="top" secondItem="08a-ls-s9s" secondAttribute="bottom" id="NUV-dH-Xty"/>
                             <constraint firstAttribute="trailing" secondItem="ner-ML-25a" secondAttribute="trailing" id="NcA-Mn-x6Z"/>
-                            <constraint firstItem="Vrn-Nt-sII" firstAttribute="top" secondItem="aAK-S0-uIB" secondAttribute="bottom" id="VjR-83-atr"/>
+                            <constraint firstItem="Vrn-Nt-sII" firstAttribute="top" secondItem="aAK-S0-uIB" secondAttribute="bottom" constant="16" id="VjR-83-atr"/>
                             <constraint firstItem="ner-ML-25a" firstAttribute="leading" secondItem="MUK-cF-RaH" secondAttribute="leading" id="qhL-GB-PFo"/>
-                            <constraint firstItem="Vrn-Nt-sII" firstAttribute="leading" secondItem="MUK-cF-RaH" secondAttribute="leading" id="t3g-C6-vRe"/>
-                            <constraint firstItem="ner-ML-25a" firstAttribute="top" secondItem="Vrn-Nt-sII" secondAttribute="bottom" id="wAo-T4-I1G"/>
+                            <constraint firstItem="Vrn-Nt-sII" firstAttribute="leading" secondItem="MUK-cF-RaH" secondAttribute="leading" constant="16" id="t3g-C6-vRe"/>
+                            <constraint firstItem="ner-ML-25a" firstAttribute="top" secondItem="Vrn-Nt-sII" secondAttribute="bottom" constant="16" id="wAo-T4-I1G"/>
                             <constraint firstItem="08a-ls-s9s" firstAttribute="top" secondItem="ner-ML-25a" secondAttribute="bottom" id="xoz-X0-hS9"/>
                         </constraints>
                     </view>
@@ -164,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iva-gz-tUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="3"/>
+            <point key="canvasLocation" x="560.79999999999995" y="2.2488755622188905"/>
         </scene>
         <!--Your Mood View Controller-->
         <scene sceneID="4v5-Bk-YPj">
@@ -307,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCs-sL-Ma1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="-325"/>
+            <point key="canvasLocation" x="2961" y="-391"/>
         </scene>
         <!--Item-->
         <scene sceneID="GVr-Nl-PaF">
@@ -326,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afS-rl-M2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3697" y="-325"/>
+            <point key="canvasLocation" x="3697" y="-392"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="s9A-Qi-u0s">
@@ -354,9 +357,9 @@
             <objects>
                 <collectionViewController id="qMO-bO-hTG" customClass="BDCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xkc-lZ-96b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="473"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="457"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.36992399014601896" blue="0.40913883917447558" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="wIe-zh-SNZ">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -371,7 +374,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
-                                <color key="backgroundColor" red="0.41895118776340357" green="1" blue="0.56883641430608667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                             </collectionViewCell>
                         </cells>
                         <connections>

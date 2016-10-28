@@ -14,7 +14,10 @@
 		953A62BF1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62BB1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m */; };
 		953A62C01DC27E9A009D7CD4 /* BDYourMoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */; };
 		9561C9761DC2964B00F91B1A /* BDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9561C9751DC2964B00F91B1A /* BDLoginViewController.m */; };
+		9561C9791DC2AC6900F91B1A /* BDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9561C9781DC2AC6900F91B1A /* BDTabBarController.m */; };
+		9561C97C1DC2BEB700F91B1A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9561C97B1DC2BEB700F91B1A /* MapKit.framework */; };
 		A949F89C1DC288B30073FBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A949F89A1DC288B30073FBBC /* Main.storyboard */; };
+		A949F89F1DC2C0FA0073FBBC /* BDLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A949F89E1DC2C0FA0073FBBC /* BDLoadViewController.m */; };
 		A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6A1DC1DA5F00AF11D7 /* main.m */; };
 		A9B00D6E1DC1DA5F00AF11D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D6D1DC1DA5F00AF11D7 /* AppDelegate.m */; };
 		A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B00D701DC1DA5F00AF11D7 /* ViewController.m */; };
@@ -41,7 +44,12 @@
 		953A62BD1DC27E9A009D7CD4 /* BDYourMoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDYourMoodViewController.m; sourceTree = "<group>"; };
 		9561C9741DC2964B00F91B1A /* BDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLoginViewController.h; sourceTree = "<group>"; };
 		9561C9751DC2964B00F91B1A /* BDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLoginViewController.m; sourceTree = "<group>"; };
+		9561C9771DC2AC6900F91B1A /* BDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTabBarController.h; sourceTree = "<group>"; };
+		9561C9781DC2AC6900F91B1A /* BDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDTabBarController.m; sourceTree = "<group>"; };
+		9561C97B1DC2BEB700F91B1A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A949F89B1DC288B30073FBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A949F89D1DC2C0FA0073FBBC /* BDLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLoadViewController.h; sourceTree = "<group>"; };
+		A949F89E1DC2C0FA0073FBBC /* BDLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLoadViewController.m; sourceTree = "<group>"; };
 		A9B00D661DC1DA5F00AF11D7 /* Badrjan_Hackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badrjan_Hackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B00D6A1DC1DA5F00AF11D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9B00D6C1DC1DA5F00AF11D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9561C97C1DC2BEB700F91B1A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,11 +89,20 @@
 			name = "Shared Instance";
 			sourceTree = "<group>";
 		};
+		9561C97A1DC2BEB700F91B1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9561C97B1DC2BEB700F91B1A /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9B00D5D1DC1DA5E00AF11D7 = {
 			isa = PBXGroup;
 			children = (
 				A9B00D681DC1DA5F00AF11D7 /* Badrjan_Hackaton */,
 				A9B00D671DC1DA5F00AF11D7 /* Products */,
+				9561C97A1DC2BEB700F91B1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +141,10 @@
 				2C0B6AEA1DC2BF0B00FC0DA2 /* BDMoodTableViewCell.m */,
 				9561C9741DC2964B00F91B1A /* BDLoginViewController.h */,
 				9561C9751DC2964B00F91B1A /* BDLoginViewController.m */,
+				9561C9771DC2AC6900F91B1A /* BDTabBarController.h */,
+				9561C9781DC2AC6900F91B1A /* BDTabBarController.m */,
+				A949F89D1DC2C0FA0073FBBC /* BDLoadViewController.h */,
+				A949F89E1DC2C0FA0073FBBC /* BDLoadViewController.m */,
 				A9B00D751DC1DA5F00AF11D7 /* Assets.xcassets */,
 				A9B00D771DC1DA5F00AF11D7 /* LaunchScreen.storyboard */,
 				A949F89A1DC288B30073FBBC /* Main.storyboard */,
@@ -213,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9561C9791DC2AC6900F91B1A /* BDTabBarController.m in Sources */,
 				2C0B6AE51DC1F59100FC0DA2 /* BDUser.m in Sources */,
 				A9B00D711DC1DA5F00AF11D7 /* ViewController.m in Sources */,
 				2C0B6AEB1DC2BF0B00FC0DA2 /* BDMoodTableViewCell.m in Sources */,
@@ -221,6 +244,7 @@
 				953A62BF1DC27E9A009D7CD4 /* BDPhotoAnalyzingManager.m in Sources */,
 				2C0B6AE81DC2634800FC0DA2 /* MoodPercentages.m in Sources */,
 				953A62BE1DC27E9A009D7CD4 /* BDCameraViewController.m in Sources */,
+				A949F89F1DC2C0FA0073FBBC /* BDLoadViewController.m in Sources */,
 				A9B00D6B1DC1DA5F00AF11D7 /* main.m in Sources */,
 				9561C9761DC2964B00F91B1A /* BDLoginViewController.m in Sources */,
 				A9B00D851DC2075500AF11D7 /* BDCollectionViewController.m in Sources */,

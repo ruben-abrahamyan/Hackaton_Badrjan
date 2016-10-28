@@ -8,11 +8,11 @@
 
 #import "BDUser.h"
 #import "BDLoginViewController.h"
-
+#import "BDLoadViewController.h"
 @interface BDLoginViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
-
+@property(nonatomic) BDLoadViewController *loader;
 @end
 
 @implementation BDLoginViewController
@@ -22,11 +22,14 @@
     self.usernameField.layer.borderColor = [[UIColor colorWithRed:145 / 255.0 green:215 / 255.0 blue:80 / 255.0 alpha:1.0] CGColor];
     self.usernameField.layer.borderWidth = 1.f;
     [self.navigationController setNavigationBarHidden:YES];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.view.backgroundColor = [UIColor blackColor];
+    self.loader = [[BDLoadViewController alloc] init];
+    [self.loader show];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+         [self.loader close];
+    });
+    
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
@@ -38,14 +41,6 @@
     [textField resignFirstResponder];
     return NO;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

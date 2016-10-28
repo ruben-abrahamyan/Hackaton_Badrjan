@@ -14,7 +14,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (nonatomic) BOOL buttonEnabled;
-
+@property (nonatomic) UIImageView *imgView;
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
 
 @end
 
@@ -32,7 +37,13 @@
         if(i == 2) {
             self.buttonEnabled = NO;
             self.nextButton.enabled = NO;
-            [self.nextButton setTitle:@"Pick at least 3" forState:UIControlStateNormal];
+            [self.nextButton setTitle:@"Pick at least 3 to Continue" forState:UIControlStateNormal];
+            self.nextButton.backgroundColor = [UIColor colorWithRed:136.f/255.0f
+                            green:136.f/255.0f
+                             blue:136.f/255.0f
+                            alpha:1.f];
+            [self.imgView removeFromSuperview];
+            self.imgView = nil;
             return;
         }
         
@@ -40,7 +51,16 @@
         if(i == 3) {
             self.buttonEnabled = YES;
             self.nextButton.enabled = YES;
-            [self.nextButton setTitle:@"Show us how you feel" forState:UIControlStateNormal];
+            [self.nextButton setTitle:@"Show Us How You Feel" forState:UIControlStateNormal];
+            self.nextButton.backgroundColor = [UIColor colorWithRed:143.f/255.0f
+                                                              green:217.f/255.0f
+                                                               blue:70/255.0f
+                                                              alpha:1.f];
+            CGSize size = [self.nextButton.titleLabel.text sizeWithFont:[UIFont systemFontOfSize:17]];
+            self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.nextButton.frame.size.width/2.f + size.width/2.f + 4,
+                                                                         CGRectGetMidY(self.nextButton.titleLabel.frame) - 6, 14, 12)];
+            self.imgView.image = [UIImage imageNamed:@"arrow"];
+            [self.nextButton addSubview:self.imgView];
             return;
         }
     }
