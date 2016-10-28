@@ -169,4 +169,16 @@
     return CGPointMake(CoordinateX, CoordinateY);
 }
 
+- (NSArray *)getTop2Moods {
+    NSArray *moods = [self.moodPercentages getArrayOfMoodsWithValues];
+    
+    return [moods sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        if ([obj1 floatValue] > [obj2 floatValue])
+            return NSOrderedDescending;
+        else if ([obj1 floatValue] < [obj2 floatValue])
+            return NSOrderedAscending;
+        return NSOrderedSame;
+    }];
+}
+
 @end

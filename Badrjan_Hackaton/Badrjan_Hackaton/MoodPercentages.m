@@ -23,4 +23,9 @@
     }
     return self;
 }
+
+- (NSArray *)getArrayOfMoodsWithValues {
+    return [NSArray arrayWithObjects: [NSNumber numberWithFloat:self.happiness],[NSNumber numberWithFloat:self.anger], [NSNumber numberWithFloat:self.disgust], [NSNumber numberWithFloat:self.contempt], [NSNumber numberWithFloat:self.sadness], [NSNumber numberWithFloat:self.neutral], [NSNumber numberWithFloat:self.fear], [NSNumber numberWithFloat:self.surprise], nil];
+}
+
 @end
